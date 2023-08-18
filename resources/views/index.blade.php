@@ -51,7 +51,7 @@
                <div class="row">
                   <div class="col-md-4 col-sm-4">
                      <div class="logo">
-                        <a href="index.html"><img src="{{ asset('images/logo.png') }}" alt="#" style="width: 150px;"/></a>
+                        <a href="{{ route('home')}}"><img src="{{ asset('images/logo.png') }}" alt="#" style="width: 150px;"/></a>
                      </div>
                   </div>
                   <div class="col-md-8 col-sm-8">
@@ -67,6 +67,7 @@
       <!-- end header -->
       <!-- banner -->
       <section class="banner_main">
+         <div class="bg_img">s</div>
          <div id="banner1" class="carousel slide banner_slide" data-ride="carousel">
             <ol class="carousel-indicators">
                <li data-target="#banner1" data-slide-to="0" class="active"></li>
@@ -75,10 +76,10 @@
                <div class="carousel-item active">
                   <div class="container-fluid">
                      <div class="carousel-caption">
-                        <div class="row">
+                        <div class="row banner_shadow">
                            <div class="col-md-7 col-lg-5">
                               <div class="text-bg">
-                                 <h1>Soluciones tecnologicas al alcance de todos
+                                 <h1>Soluciones tecnológicas al alcance de todos
                                  </h1>
                               </div>
                            </div>
