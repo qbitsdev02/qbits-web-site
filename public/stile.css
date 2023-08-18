@@ -1,0 +1,140 @@
+* {
+    margin: 0px;
+    padding: 0px;
+
+}
+
+.nav_home {
+    color: black;
+
+}
+
+.actives {
+    color: rgb(255, 121, 0);
+}
+
+.img_home {
+    width: 100%;
+    position: absolute;
+    /* opacity: 0.2; */
+}
+
+.bg_home_img {
+    background-image: url('image/home/qbits\ developers.jpg');
+    background-size: cover;
+    /* opacity: 0.5; */
+}
+
+.body_home_cover {
+    height: 100vh;
+    font-family: 'Josefin Sans', sans-serif;
+    margin-bottom: 100px;
+}
+
+.name_home {
+    color: rgb(255, 121, 0);
+    font-size: 250px;
+    text-shadow: 2px 2px rgb(0, 0, 0);
+    margin-top: 15%;
+    font-weight: bold;
+    background: rgba(0, 0, 0, 0.2);
+}
+
+.descripcion_home {
+    color: rgb(255, 255, 255);
+    /* font-size: 2em; */
+    font-weight: bold;
+    text-shadow: 1px 1px rgb(0, 0, 0);
+}
+
+.service {
+    margin-bottom: 100px;
+}
+
+.card_home {
+    padding: 20px;
+    text-align: center;
+}
+
+.card_home p {
+    text-align: justify;
+}
+
+.card_name {
+    text-align: center;
+    padding-bottom: 30px;
+}
+
+.about {
+    padding: 100px;
+    background: rgba(90, 79, 154, 0.2);
+}
+
+.about_description {
+    padding: 30px;
+    display: grid;
+    place-content: center;
+}
+
+.about_description_text {
+    text-align: justify;
+}
+
+.img_card {
+    text-align: center;
+    margin-bottom: 50px;
+    width: 35%;
+}
+
+.logo_business {
+    padding: 50px;
+    width: 250px;
+}
+
+.card_project {
+    margin-top: 100px;
+    /* border: 1px solid; */
+    /* border-radius: 15px; */
+    /* padding: 10px; */
+    /* box-shadow: 5px 5px; */
+
+}
+
+.card_project img {
+    /* width: 50%; */
+    height: 150px;
+    margin-bottom: 25px;
+}
+
+.mapa {
+    margin-top: 100px;
+    height: 700px;
+    background: rgb(255, 121, 0);
+}
+
+.contact {
+    color: #fff;
+    margin-top: 100px;
+    height: 700px;
+    background: rgb(90, 79, 154);
+}
+
+.contact_info {
+    padding: 50px;
+    /* margin-top: 100px; */
+    text-align: justify;
+}
+
+.contact_info_form {
+    padding-left: 100px;
+    padding-right: 100px;
+}
+
+.btn_contact_form {
+
+    background: rgb(255, 121, 0);
+}
+
+.footer_qbits{
+    padding: 50px;
+}
