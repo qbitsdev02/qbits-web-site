@@ -25,6 +25,10 @@
       <!-- Tweaks for older IEs-->
       <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css">
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.css" media="screen">
+
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@1,700&display=swap" rel="stylesheet">
       <!--[if lt IE 9]>
       <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
@@ -56,7 +60,10 @@
                   </div>
                   <div class="col-md-8 col-sm-8">
                      <div class="right_bottun">
-                        <button class="openbtn" onclick="openNav()"><img src="{{ asset('images/menu_icon.png') }}" alt="#"/> </button> 
+                        <button class="openbtn" onclick="openNav()">
+                           <img class="desktop" src="{{ asset('images/menu_icon.png') }}" alt="#"/>
+                           <img class="movil" src="{{ asset('images/menu_icon_black.png') }}" alt="#"/>
+                        </button> 
                      </div>
                   </div>
                </div>
@@ -67,7 +74,17 @@
       <!-- end header -->
       <!-- banner -->
       <section class="banner_main">
-         <div class="bg_img">s</div>
+         <div class="bg_img"></div>
+         <div class="header_banner text-center">
+            <div class="text-bg text-center">
+               <h1>
+                  "Technological Solutions Within Reach of Everyone"
+               </h1>
+            </div>
+            <div class="ban_track">
+               <figure><img class="image_desktop" src="{{ asset('images/track.png') }}" alt="#" style="width: 300px;"/></figure>
+            </div>
+         </div>
          <div id="banner1" class="carousel slide banner_slide" data-ride="carousel">
             <ol class="carousel-indicators">
                <li data-target="#banner1" data-slide-to="0" class="active"></li>
@@ -79,7 +96,8 @@
                         <div class="row banner_shadow">
                            <div class="col-md-7 col-lg-5">
                               <div class="text-bg">
-                                 <h1>Soluciones tecnológicas al alcance de todos
+                                 <h1>
+                                    "Technological Solutions Within Reach of Everyone"
                                  </h1>
                               </div>
                            </div>
@@ -87,7 +105,7 @@
                               <div class="row">
                                  <div class="col-md-6">
                                     <div class="ban_track">
-                                       <figure><img src="{{ asset('images/track.png') }}" alt="#" style="width: 300px;"/></figure>
+                                       <figure><img class="image_desktop" src="{{ asset('images/track.png') }}" alt="Q bits inc Dev"/></figure>
                                     </div>
                                  </div>
                               </div>
@@ -112,7 +130,8 @@
                <div class="col-md-6">
                   <div class="titlepage">
                      <h2>About Us</h2>
-                     <p> There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, There 
+                     <p>
+                        Welcome to <b>Q bits inc dev</b>, We're tech enthusiasts providing affordable solutions to small businesses, making technology accessible to all. Our custom solutions drive efficiency and success. Our team of experts will guide you through the digital transformation journey. Join us and discover how we can enhance your business. 
                      </p>
                   </div>
                </div>
@@ -126,33 +145,35 @@
             <div class="row">
                <div class="col-md-10 offset-md-1">
                   <div class="titlepage">
-                     <h2>Our Services</h2>
-                     <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, There </p>
+                     <h2>Why us?</h2>
+                     <p><b>Customized Solutions at Costs:</b> We understand that every business is unique and has specific needs. Our solutions are tailor-made to meet your company's individual requirements. The best part is, we do this at an affordable cost, allowing you to benefit from top-notch solutions without exceeding your budget.</p>
+                     <p><b>Expertise and Professionalism: </b> We have a team of technology enthusiasts with extensive experience in developing solutions for small businesses. Our dedication ensures you'll receive professional service and results that drive your business forward. From conceptualization to implementation, we stand by your side every step of the way.</p>
+                     <p><b>Simplified Digital Transformation: </b> Technology is crucial in today's business world. By opting for our services, you're taking a significant step towards digital transformation. We provide you with the tools and strategies needed to enhance operational efficiency, boost productivity, and stand out in the market. Our mission is to pave the way for success in the digital age.</p>
                   </div>
                </div>
             </div>
-            <div class="row">
+            <div class="row desktop">
                <div class="col-md-12">
                   <div class="service_main">
                      <div class="service_box yell_colo">
-                        <i><img src="{{ asset('images/logo.png') }}" alt="#"/></i>
-                        <h4>FLY ANYWHERE</h4>
+                        <i><img src="{{ asset('images/Idea.jpg') }}" alt="Customized Solutions at Affordable Costs"/></i>
+                        <h4>Idea</h4>
                      </div>
                      <div class="service_box yelldark_colo">
-                        <i><img src="{{ asset('images/logo.png') }}" alt="#"/></i>
-                        <h4>Cargo service</h4>
+                        <i><img src="{{ asset('images/Digital_transformation.jpg') }}" alt=""/></i>
+                        <h4>Digital</h4>
                      </div>
                      <div class="service_box yell_colo">
-                        <i><img src="{{ asset('images/logo.png') }}" alt="#"/></i>
-                        <h4> COURIER SERVICES</h4>
+                        <i><img src="{{ asset('images/Professionalism.jpg') }}" alt="Expertise and Professionalism"/></i>
+                        <h4>Professionalism</h4>
                      </div>
                      <div class="service_box yelldark_colo">
-                        <i><img src="{{ asset('images/logo.png') }}" alt="#"/></i>
-                        <h4>BOX STORAGE</h4>
+                        <i><img src="{{ asset('images/Constant_Innovation.jpg') }}" alt="Constant Innovation"/></i>
+                        <h4>Innovation</h4>
                      </div>
                      <div class="service_box yell_colo">
-                        <i><img src="{{ asset('images/logo.png') }}" alt="#"/></i>
-                        <h4>100% safe</h4>
+                        <i><img src="{{ asset('images/soport.jpg') }}" alt="soport"/></i>
+                        <h4>Soport</h4>
                      </div>
                   </div>
                </div>
@@ -161,6 +182,29 @@
                </div> -->
             </div>
          </div>
+
+         <div class="row movil">
+            <div class="col-md-12">
+               <div class="service_main">
+                  <div class="service_box yell_colo">
+                     <i><img src="{{ asset('images/Idea.jpg') }}" alt="Customized Solutions at Affordable Costs"/></i>
+                     <h4>Idea</h4>
+                  </div>
+                  <div class="service_box yelldark_colo">
+                     <i><img src="{{ asset('images/Professionalism.jpg') }}" alt="Expertise and Professionalism"/></i>
+                        <h4>Professionalism</h4>
+                  </div>
+                  <div class="service_box yell_colo">
+                     <i><img src="{{ asset('images/soport.jpg') }}" alt="soport"/></i>
+                        <h4>Soport</h4>
+                  </div>
+               </div>
+            </div>
+            <!-- <div class="col-md-12">
+               <a class="read_more" href="#">Read More</a>
+            </div> -->
+         </div>
+      </div>
       </div>
       <!-- end service section -->
       <!-- vehicles section -->
@@ -169,8 +213,10 @@
             <div class="row">
                <div class="col-md-12">
                   <div class="titlepage">
-                     <h2>More Services</h2>
-                     <p>nternet. It uses a dictionary of over 200 Latin words, combined with .</p>
+                     <h2>Our Services</h2>
+                     <p>
+                        At <b>Q bits inc dev</b>, we believe that technology should not be limited to a select few. That's why we've crafted innovative, affordable, and easily accessible solutions that are within everyone's reach. With our budget-friendly subscription, you'll gain full access to our advanced tools, designed to transform your business without straining your budget.
+                     </p>
                   </div>
                </div>
             </div>
@@ -181,6 +227,7 @@
                <li data-target="#veh" data-slide-to="1"></li>
                <li data-target="#veh" data-slide-to="2"></li>
             </ol>
+
             <div class="carousel-inner">
                <div class="carousel-item active">
                   <div class="container">
@@ -206,66 +253,18 @@
                      </div>
                   </div>
                </div>
-               <div class="carousel-item">
-                  <div class="container">
-                     <div class="carousel-caption">
-                        <div class="row">
-                           <div class="col-md-4">
-                              <div class="vehicles_truck">
-                                 <figure><img src="{{ asset('images/about.png') }}" alt="#"/></figure>
-                              </div>
-                           </div>
-                           <div class="col-md-4">
-                              <div class="vehicles_truck">
-                                 <figure><img src="{{ asset('images/about.png') }}" alt="#"/></figure>
-                              </div>
-                              <!-- <h3 class="blac_co">Truck</h3> -->
-                           </div>
-                           <div class="col-md-4">
-                              <div class="vehicles_truck">
-                                 <figure><img src="{{ asset('images/about.png') }}" alt="#"/></figure>
-                              </div>
-                           </div>
-                        </div>
-                     </div>
-                  </div>
-               </div>
-               <div class="carousel-item">
-                  <div class="container">
-                     <div class="carousel-caption">
-                        <div class="row">
-                           <div class="col-md-4">
-                              <div class="vehicles_truck">
-                                 <figure><img src="{{ asset('images/about.png') }}" alt="#"/></figure>
-                              </div>
-                           </div>
-                           <div class="col-md-4">
-                              <div class="vehicles_truck">
-                                 <figure><img src="{{ asset('images/about.png') }}" alt="#"/></figure>
-                              </div>
-                              <!-- <h3 class="blac_co">Truck</h3> -->
-                           </div>
-                           <div class="col-md-4">
-                              <div class="vehicles_truck">
-                                 <figure><img src="{{ asset('images/about.png') }}" alt="#"/></figure>
-                              </div>
-                           </div>
-                        </div>
-                     </div>
-                  </div>
-               </div>
             </div>
-            <a class="carousel-control-prev" href="#veh" role="button" data-slide="prev">
+            {{-- <a class="carousel-control-prev" href="#veh" role="button" data-slide="prev">
             <i class="fa fa-angle-left" aria-hidden="true"></i>
             </a>
             <a class="carousel-control-next" href="#veh" role="button" data-slide="next">
             <i class="fa fa-angle-right" aria-hidden="true"></i>
-            </a>
+            </a> --}}
          </div>
       </section>
       <!-- end vehicles section -->
       <!-- testimonial section -->
-      <!-- <div id="testimonial" class="testimonial bottom_cross bottom_cross2">
+      {{-- <div id="testimonial" class="testimonial bottom_cross bottom_cross2">
          <div class="container">
             <div class="row">
                <div class="col-md-12">
@@ -347,7 +346,7 @@
                </div>
             </div>
          </div>
-      </div> -->
+      </div> --}}
       <!-- end testimonial section -->
       <!-- choose section -->
       <div class="choose">
@@ -364,16 +363,18 @@
                   <div class="choose_box">
                      <i><img src="{{ asset('images/why1.png') }}" alt="#"/></i>
                      <h3>Our Vission</h3>
-                     <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters,</p>
-                     <a class="read_more" href="#">Read More</a>
+                     <p>
+                        "At <b>Q bits inc dev</b>, our vision is to make technology a resource within everyone's reach. We create and develop innovative solutions that empower businesses, regardless of their size. We take pride in offering technological excellence at a cost that makes growth and success achievable for all."
+                     </p>
                   </div>
                </div>
                <div class="col-md-5 offset-md-2">
                   <div class="choose_box">
-                     <i><img src="{{ asset('images/why2.png') }}" alt="#"/></i>
-                     <h3>Estimate Shipping</h3>
-                     <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters,</p>
-                     <a class="read_more" href="#">Read More</a>
+                     <i><img src="{{ asset('images/why1.png') }}" alt="#"/></i>
+                     <h3>Our mission</h3>
+                     <p>
+                        At <b>Q bits inc dev</b>, our mission is to demystify technology for businesses of all sizes. Through innovative and affordable solutions, we empower our clients to thrive in an ever-changing digital world. We drive growth, efficiency, and success at every step.
+                     </p>
                   </div>
                </div>
             </div>
@@ -386,7 +387,7 @@
             <div class="row">
                <div class="col-md-12">
                   <div class="titlepage">
-                     <h2>Requst A call  for You</h2>
+                     <h2>Request a Call on Your Behalf</h2>
                   </div>
                </div>
             </div>
@@ -432,20 +433,47 @@
                <div class="row">
                   <div class="col-md-4">
                      <ul class="location_icon">
-                        <li><a href="#"><i class="fa fa-map-marker" style="color: #ff7900;" aria-hidden="true"></i></a> Address : Lorem Ipsum <br> is simply dummy 
+                        <li>
+                           <i class="fa fa-map-marker" style="color: #ff7900;" aria-hidden="true"></i>
+                           <a href="mailto:contactus@qbitsinc.com">Florida, Miami, 150 Se 2nd Ave Ste 300</a>
                         </li>
-                        <li><a href="#"><i class="fa fa-phone" style="color: #ff7900;" aria-hidden="true"></i></a>Phone :  +(1234) 567 890</li>
-                        <li><a href="#"><i class="fa fa-envelope" style="color: #ff7900;" aria-hidden="true"></i></a>Email : demo@gmail.com</li>
+                        <li><i class="fa fa-phone" style="color: #ff7900;" aria-hidden="true"></i>
+                           <a href="https://api.whatsapp.com/send/?phone=17865719783&text=Hello,%20I%20would%20like%20to%20know%20about%20your%20services&type=phone_number&app_absent=0" target="_blank">+1 7865719783</a>
+                        </li>
+                        <li>
+                           <i class="fa fa-envelope" style="color: #ff7900;" aria-hidden="true"></i>
+                           <a href="mailto:contactus@qbitsinc.com">contactus@qbitsinc.com</a>
+                        </li>
                      </ul>
-                     <form class="bottom_form">
+                     {{-- <form class="bottom_form">
+                         no de momento, puedes escribir al correo si desea informaciòn
                         <h3>Newsletter</h3>
                         <input class="enter" placeholder="Enter your email" type="text" name="Enter your email">
                         <button class="sub_btn">subscribe</button>
-                     </form>
+                     </form> --}}
                   </div>
-                  <div class="col-md-8">
+                  <div class="col-md-4">
+                     <ul class="location_icon">
+                        <li>
+                           <i class="fa fa-map-marker" style="color: #ff7900;" aria-hidden="true"></i>
+                           <a href="mailto:contactus@qbitsinc.com">Anzoátegui, Lechería, Av. Principal de Lechería.
+                              Centro Empresarial Y2K. Piso 1- Oficina 1-2</a>
+                        </li>
+                        <li><i class="fa fa-phone" style="color: #ff7900;" aria-hidden="true"></i>
+                           <a href="https://api.whatsapp.com/send/?phone=584248675340&text=hola%20me%20gustaria%20saber%20de%20sus%20servicio&type=phone_number&app_absent=0" target="_blank">+58 424-8675340</a>
+                        </li>
+                     </ul>
+                     {{-- <form class="bottom_form">
+                         no de momento, puedes escribir al correo si desea informaciòn
+                        <h3>Newsletter</h3>
+                        <input class="enter" placeholder="Enter your email" type="text" name="Enter your email">
+                        <button class="sub_btn">subscribe</button>
+                     </form> --}}
+                  </div>
+                  <div class="col-md-4">
                      <div class="map">
-                        <figure><img src="{{ asset('images/map.png') }}" alt="#"/></figure>
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3592.9290299041622!2d-80.19312332387068!3d25.77290760814072!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88d9b69c4a40298d%3A0x98ca6dd47456810d!2s150%20SE%202nd%20Ave%20Ste%20300%2C%20Miami%2C%20FL%2033131%2C%20EE.%20UU.!5e0!3m2!1ses!2sve!4v1692650006477!5m2!1ses!2sve" width="100%" height="300px" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                        {{-- <figure><img src="{{ asset('images/map.png') }}" alt="#"/></figure> --}}
                      </div>
                   </div>
                </div>

@@ -26,8 +26,15 @@
         font-size: 16px;
     }
     .banner_main {
-        background-size: auto 64%;
-        padding: 220px 0px 0px 0px;
+        /* background-size: auto 64%;
+        padding: 220px 0px 0px 0px; */
+
+        background: url(../images/computer_developer.jpg);
+     padding: 500px 0px 0px 0px;
+     background-size: 65%;
+     background-repeat: no-repeat;
+     min-height: 1150px;
+     background-position: right top;
     }
     .text-bg h1 {
         font-size: 43px;
@@ -69,10 +76,11 @@
         line-height: 44px;
     }
     .banner_main {
-        padding: 152px 0px 0px 0px;
+        background-size: 50%;
+        /* padding: 152px 0px 0px 0px;
         background-color: #cacaca !important;
         background: inherit;
-        min-height: 919px;
+        min-height: 919px; */
     }
     .about {
         margin-top: 90px;
@@ -205,12 +213,39 @@
         margin-top: 0px !important;
     }
     .banner_main {
-        padding: 152px 0px 90px 0px;
-        background-color: #cacaca !important;
-        background: inherit;
+        background: url(../images/computer_developer.jpg);
+        background-size: 100vh;
+        background-repeat: no-repeat;
+        padding: 50% 0px 0px 0px;
     }
+    .image_desktop{
+        display: none;
+    }
+
+    .banner_shadow{
+        /* background: rgba(255, 158, 0, 0.2); */
+        position: relative;
+        top: 0;
+        left: 100px;
+        width: 100%;
+    }
+
+    .header_banner{
+        /* font-family: 'Roboto Mono', monospace; */
+        display: block;
+        background: rgba(255, 158, 0, 0.5);
+    }
+    
+    .bg_img{
+        display: none;
+        position: relative;
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+
     .banner_slide {
         padding: 0 50px 0 0px;
+        display: none;
     }
     .text-bg {
         max-width: inherit;
@@ -219,13 +254,29 @@
     .transfot {
         padding-top: 30px;
     }
-    .about {
-        margin-top: 90px;
+    .about_right{
+        text-align: center;
+    }
+
+    .about_right img{
+        margin: 10% 0;
+        width: 50%;
     }
     .text-bg h1 {
-        font-size: 36px;
-        line-height: 51px;
+        font-size: 30px;
+    color: #ffffff;
+    padding-bottom: 45px;
+    margin-top: 25%;
+    font-weight: bold;
+    text-shadow: 2px 2px #975cdb;
+    background: rgba(255, 158, 0,0.5);
+    padding: 0 50px;
     }
+
+    .desktop{display: none;}
+    .movil{display: block;}
+
+
     #banner1 a.carousel-control-prev {
         top: 44%;
     }
