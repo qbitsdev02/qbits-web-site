@@ -30,9 +30,8 @@
       <link rel="preconnect" href="https://fonts.googleapis.com">
       <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
       <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@1,700&display=swap" rel="stylesheet">
-      <!--[if lt IE 9]>
-      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
-      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
+      
+      
       <script src="https://kit.fontawesome.com/d9e42506e1.js" crossorigin="anonymous"></script>
       <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
       
@@ -40,11 +39,11 @@
    <!-- body -->
    <body class="main-layout">
       <span class="ir-arriba desktop mobile">
-         <i class="fa-solid fa-circle-up" style="color: #3b0663;font-size: 30px;padding-top: 10px;"></i>
+         <i class="fa-solid fa-circle-up" style="color: #fff;font-size: 30px;padding-top: 10px;"></i>
       </span>
       <!-- loader  -->
       <div class="loader_bg">
-         <div class="loader"><img src="{{ asset('images/loading.png') }}" alt="#" /></div>
+         <div class="loader"><img src="{{ asset('images/loading.png') }}"/></div>
       </div>
       <!-- end loader -->
       <div id="mySidepanel" class="sidepanel">
@@ -80,9 +79,22 @@
                         <a class="desktop" href="">
                            <i class="fa-brands fa-facebook" style="color: #f5f3f2;"></i>                           
                         </a>
-                        <a class="desktop" href="https://www.instagram.com/qbitsdev/">
+                        <a class="desktop" href="https://www.instagram.com/qbitsdev/" target="_blank">
                            <i class="fa-brands fa-instagram" style="color: #f5f3f2;"></i>                           
                         </a>
+                        @if(session('locale') == 'en')
+                           <a href="{{ route('change_language', 'es') }}">
+                              <img class="bandera" src="{{ asset('images/espana.png') }}" alt="español"/>
+                           </a>
+                        @else
+                           <a href="{{ route('change_language', 'en') }}">
+                              <img class="bandera" src="{{ asset('images/eeuu.png') }}" alt="ingles"/>
+                           </a>
+                        @endif
+                        {{-- <a href="{{ route('change_language', 'en') }}">
+
+                           <i class="fa fa-solid fa-globe changeleng" style="color: #f5f3f2;"></i>
+                        </a> --}}
                         <button class="openbtn" onclick="openNav()">
                            <img class="desktop" src="{{ asset('images/menu_icon.png') }}" alt="#"/>
                            <img class="movil" src="{{ asset('images/menu_icon_black.png') }}" alt="#"/>
@@ -96,6 +108,8 @@
       <!-- end header inner -->
       <!-- end header -->
       <!-- banner -->
+
+      
       <section class="banner_main">
          <div class="bg_img"></div>
          <div class="header_banner text-center">
@@ -430,7 +444,8 @@
                <div class="container">
                   <div class="row">
                      <div class="col-md-12">
-                        <p>© 2023 All Rights Reserved. qbitsinc.com</p>
+                        
+                        <p>© 2023 {{ __('copy') }}</p>
                      </div>
                   </div>
                </div>

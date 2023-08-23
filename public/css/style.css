@@ -339,6 +339,7 @@ ul.conat_info li a:hover {
 
 
 .header {
+     position: fixed;
      width: 100%;
      padding: 30px 30px;
      background: rgba(255, 121, 0, 0.2);
@@ -386,6 +387,11 @@ ul.conat_info li a:hover {
           padding: 10px 10px;
           background: rgba(255, 121, 0, 1)
      }
+}
+
+.bandera{
+     width: 100%;
+     padding: 10px;
 }
 
 /** banner section **/
