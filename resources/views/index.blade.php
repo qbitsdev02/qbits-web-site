@@ -24,6 +24,7 @@
       <link rel="stylesheet" href="{{ asset('css/jquery.mCustomScrollbar.min.css') }}">
       <!-- Tweaks for older IEs-->
       <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css">
+      
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.css" media="screen">
 
       <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -32,9 +33,15 @@
       <!--[if lt IE 9]>
       <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
+      <script src="https://kit.fontawesome.com/d9e42506e1.js" crossorigin="anonymous"></script>
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+      
    </head>
    <!-- body -->
    <body class="main-layout">
+      <span class="ir-arriba desktop mobile">
+         <i class="fa-solid fa-circle-up" style="color: #3b0663;font-size: 30px;padding-top: 10px;"></i>
+      </span>
       <!-- loader  -->
       <div class="loader_bg">
          <div class="loader"><img src="{{ asset('images/loading.png') }}" alt="#" /></div>
@@ -42,10 +49,20 @@
       <!-- end loader -->
       <div id="mySidepanel" class="sidepanel">
          <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
-         <a href="{{ route('home') }}">Home </a>
-         <a href="#about">About</a>
-         <a href="#services">Services</a>
-         <a href="#contact">Contact</a>
+         <img src="{{ asset('images/loading.png') }}" alt="Qbits inc" style="padding: 5% 20%;">
+         <a href="{{ route('home') }}"> <i class="fa fa-solid fa-house" style="color: #e17900;" aria-hidden="true"></i> <span>Home </span></a>
+         <a href="#about" onclick="closeNav()"> <i class="fa-solid fa-user" style="color: #e17900;" aria-hidden="true"></i> <span>About</span></a>
+         <a href="#why_us" onclick="closeNav()"><i class="fa-solid fa-question" style="color: #e17900;"></i> <span>Why us?</span></a>
+         <a href="#contact" onclick="closeNav()"><i class="fa-solid fa-envelope" style="color: #e17900;"></i> <span>Contact</span> </a>
+         <div class="division"></div>
+         <div class="rrss_sidebar">
+            <a href="" target="_blank">
+               <i class="fa-brands fa-facebook" style="color: #ff7900;"></i>                           
+            </a>
+            <a href="https://www.instagram.com/qbitsdev/" target="_blank">
+               <i class="fa-brands fa-instagram" style="color: #ff7900;"></i>                           
+            </a>
+         </div>
       </div>
       <!-- header -->
       <header>
@@ -60,6 +77,12 @@
                   </div>
                   <div class="col-md-8 col-sm-8">
                      <div class="right_bottun">
+                        <a class="desktop" href="">
+                           <i class="fa-brands fa-facebook" style="color: #f5f3f2;"></i>                           
+                        </a>
+                        <a class="desktop" href="https://www.instagram.com/qbitsdev/">
+                           <i class="fa-brands fa-instagram" style="color: #f5f3f2;"></i>                           
+                        </a>
                         <button class="openbtn" onclick="openNav()">
                            <img class="desktop" src="{{ asset('images/menu_icon.png') }}" alt="#"/>
                            <img class="movil" src="{{ asset('images/menu_icon_black.png') }}" alt="#"/>
@@ -133,6 +156,7 @@
                      <p>
                         Welcome to <b>Q bits inc dev</b>, We're tech enthusiasts providing affordable solutions to small businesses, making technology accessible to all. Our custom solutions drive efficiency and success. Our team of experts will guide you through the digital transformation journey. Join us and discover how we can enhance your business. 
                      </p>
+                     <a class="read_more" href="#">Read More</a>
                   </div>
                </div>
             </div>
@@ -140,7 +164,7 @@
       </div>
       <!-- about section -->
       <!-- service section -->
-      <div id="services" class="service">
+      <div id="why_us" class="service">
          <div class="container">
             <div class="row">
                <div class="col-md-10 offset-md-1">
@@ -177,9 +201,6 @@
                      </div>
                   </div>
                </div>
-               <!-- <div class="col-md-12">
-                  <a class="read_more" href="#">Read More</a>
-               </div> -->
             </div>
          </div>
 
@@ -263,91 +284,6 @@
          </div>
       </section>
       <!-- end vehicles section -->
-      <!-- testimonial section -->
-      {{-- <div id="testimonial" class="testimonial bottom_cross bottom_cross2">
-         <div class="container">
-            <div class="row">
-               <div class="col-md-12">
-                  <div class="titlepage">
-                     <h2>Testimonials</h2>
-                     <p>nternet. It uses a dictionary of over 200 Latin words, combined with .</p>
-                  </div>
-               </div>
-            </div>
-            <div class="row">
-               <div class="col-md-12">
-                  <div id="myCarousel" class="carousel slide testimonial_Carousel " data-ride="carousel">
-                     <ol class="carousel-indicators">
-                        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-                        <li data-target="#myCarousel" data-slide-to="1"></li>
-                        <li data-target="#myCarousel" data-slide-to="2"></li>
-                     </ol>
-                     <div class="carousel-inner">
-                        <div class="carousel-item active">
-                           <div class="container">
-                              <div class="carousel-caption ">
-                                 <div class="row">
-                                    <div class="col-md-12">
-                                       <div class="testimonial_box">
-                                          <figure><img src="images/our.png" alt="#"/></figure>
-                                          <h3>Luda Johnson <br><span class="kisu">( Ceo)</span></h3>
-                                          <p>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 year</p>
-                                       </div>
-                                    </div>
-                                 </div>
-                              </div>
-                           </div>
-                        </div>
-                        <div class="carousel-item">
-                           <div class="container">
-                              <div class="carousel-caption">
-                                 <div class="row">
-                                    <div class="col-md-12">
-                                       <div class="testimonial_box">
-                                          <figure><img src="images/our.png" alt="#"/></figure>
-                                          <h3>Luda Johnson <br><span class="kisu">( Ceo)</span></h3>
-                                          <p>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 year</p>
-                                       </div>
-                                    </div>
-                                 </div>
-                              </div>
-                           </div>
-                        </div>
-                        <div class="carousel-item">
-                           <div class="container">
-                              <div class="carousel-caption">
-                                 <div class="row">
-                                    <div class="col-md-12">
-                                       <div class="full cross_layout">
-                                          <div class="testimonial_box">
-                                             <figure><img src="images/our.png" alt="#"/></figure>
-                                             <h3>Luda Johnson <br><span class="kisu">( Ceo)</span></h3>
-                                             <p>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 year</p>
-                                          </div>
-                                       </div>
-                                    </div>
-                                 </div>
-                              </div>
-                           </div>
-                        </div>
-                     </div>
-                     <a class="carousel-control-prev" href="#myCarousel" role="button" data-slide="prev">
-                     <i class="fa fa-caret-left" aria-hidden="true"></i>
-                     </a>
-                     <a class="carousel-control-next" href="#myCarousel" role="button" data-slide="next">
-                     <i class="fa fa-caret-right" aria-hidden="true"></i>
-                     </a>
-                  </div>
-               </div>
-            </div>
-            <div class="row">
-               <div class="col-md-12">
-                  <a class="read_more" href="#">Read More</a>
-               </div>
-            </div>
-         </div>
-      </div> --}}
-      <!-- end testimonial section -->
       <!-- choose section -->
       <div class="choose">
          <div class="container">
@@ -435,7 +371,7 @@
                      <ul class="location_icon">
                         <li>
                            <i class="fa fa-map-marker" style="color: #ff7900;" aria-hidden="true"></i>
-                           <a href="mailto:contactus@qbitsinc.com">Florida, Miami, 150 Se 2nd Ave Ste 300</a>
+                           <a>Florida, Miami, 150 Se 2nd Ave Ste 300</a>
                         </li>
                         <li><i class="fa fa-phone" style="color: #ff7900;" aria-hidden="true"></i>
                            <a href="https://api.whatsapp.com/send/?phone=17865719783&text=Hello,%20I%20would%20like%20to%20know%20about%20your%20services&type=phone_number&app_absent=0" target="_blank">+1 7865719783</a>
@@ -443,6 +379,10 @@
                         <li>
                            <i class="fa fa-envelope" style="color: #ff7900;" aria-hidden="true"></i>
                            <a href="mailto:contactus@qbitsinc.com">contactus@qbitsinc.com</a>
+                        </li>
+                        <li style="display: block">
+                           <i class="fa fa-solid fa-globe" style="color: #ff7900;"></i>
+                           <a >Principal</a>
                         </li>
                      </ul>
                      {{-- <form class="bottom_form">
@@ -456,24 +396,32 @@
                      <ul class="location_icon">
                         <li>
                            <i class="fa fa-map-marker" style="color: #ff7900;" aria-hidden="true"></i>
-                           <a href="mailto:contactus@qbitsinc.com">Anzoátegui, Lechería, Av. Principal de Lechería.
+                           <a>Anzoátegui, Lechería, Av. Principal de Lechería.
                               Centro Empresarial Y2K. Piso 1- Oficina 1-2</a>
                         </li>
                         <li><i class="fa fa-phone" style="color: #ff7900;" aria-hidden="true"></i>
                            <a href="https://api.whatsapp.com/send/?phone=584248675340&text=hola%20me%20gustaria%20saber%20de%20sus%20servicio&type=phone_number&app_absent=0" target="_blank">+58 424-8675340</a>
                         </li>
                      </ul>
-                     {{-- <form class="bottom_form">
-                         no de momento, puedes escribir al correo si desea informaciòn
-                        <h3>Newsletter</h3>
-                        <input class="enter" placeholder="Enter your email" type="text" name="Enter your email">
-                        <button class="sub_btn">subscribe</button>
-                     </form> --}}
                   </div>
                   <div class="col-md-4">
                      <div class="map">
-                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3592.9290299041622!2d-80.19312332387068!3d25.77290760814072!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88d9b69c4a40298d%3A0x98ca6dd47456810d!2s150%20SE%202nd%20Ave%20Ste%20300%2C%20Miami%2C%20FL%2033131%2C%20EE.%20UU.!5e0!3m2!1ses!2sve!4v1692650006477!5m2!1ses!2sve" width="100%" height="300px" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                        <div class="bg_maps">
+                           <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3592.9290299041622!2d-80.19312332387068!3d25.77290760814072!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88d9b69c4a40298d%3A0x98ca6dd47456810d!2s150%20SE%202nd%20Ave%20Ste%20300%2C%20Miami%2C%20FL%2033131%2C%20EE.%20UU.!5e0!3m2!1ses!2sve!4v1692803903513!5m2!1ses!2sve" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                        </div>
                         {{-- <figure><img src="{{ asset('images/map.png') }}" alt="#"/></figure> --}}
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <div class="rrss">
+               <div class="container">
+                  <div class="row">
+                     <div class="col-md-12">
+                        <i class="fa-brands fa-facebook" style="color: #ff7900;"></i>
+                        <a href="https://www.instagram.com/qbitsdev/" target="_blank">
+                           <i class="fa-brands fa-instagram" style="color: #ff7900;"></i>                           
+                        </a>
                      </div>
                   </div>
                </div>
@@ -498,6 +446,8 @@
       <!-- sidebar -->
       <script src="{{ asset('js/jquery.mCustomScrollbar.concat.min.js') }}"></script>
       <script src="{{ asset('js/custom.js') }}"></script>
+      <script src="{{ asset('js/menu_fixed.js') }}"></script>
+      <script src="{{ asset('js/buton_up.js') }}"></script>
       <script>
          function openNav() {
            document.getElementById("mySidepanel").style.width = "250px";
