@@ -91,10 +91,6 @@
                               <img class="bandera" src="{{ asset('images/eeuu.png') }}" alt="ingles"/>
                            </a>
                         @endif
-                        {{-- <a href="{{ route('change_language', 'en') }}">
-
-                           <i class="fa fa-solid fa-globe changeleng" style="color: #f5f3f2;"></i>
-                        </a> --}}
                         <button class="openbtn" onclick="openNav()">
                            <img class="desktop" src="{{ asset('images/menu_icon.png') }}" alt="#"/>
                            <img class="movil" src="{{ asset('images/menu_icon_black.png') }}" alt="#"/>
@@ -108,14 +104,12 @@
       <!-- end header inner -->
       <!-- end header -->
       <!-- banner -->
-
-      
       <section class="banner_main">
          <div class="bg_img"></div>
          <div class="header_banner text-center">
             <div class="text-bg text-center">
                <h1>
-                  "Technological Solutions Within Reach of Everyone"
+                  "{{ __('banner_title') }}"
                </h1>
             </div>
             <div class="ban_track">
@@ -134,7 +128,7 @@
                            <div class="col-md-7 col-lg-5">
                               <div class="text-bg">
                                  <h1>
-                                    "Technological Solutions Within Reach of Everyone"
+                                    "{{ __('banner_title') }}"
                                  </h1>
                               </div>
                            </div>
@@ -166,11 +160,11 @@
                </div>
                <div class="col-md-6">
                   <div class="titlepage">
-                     <h2>About Us</h2>
+                     <h2>{{ __('about_title') }}</h2>
                      <p>
-                        Welcome to <b>Q bits inc dev</b>, We're tech enthusiasts providing affordable solutions to small businesses, making technology accessible to all. Our custom solutions drive efficiency and success. Our team of experts will guide you through the digital transformation journey. Join us and discover how we can enhance your business. 
+                        {{ __('about_description') }}
                      </p>
-                     <a class="read_more" href="#">Read More</a>
+                     <a class="read_more" href="#">{{ __('read_more') }}</a>
                   </div>
                </div>
             </div>
@@ -183,10 +177,11 @@
             <div class="row">
                <div class="col-md-10 offset-md-1">
                   <div class="titlepage">
-                     <h2>Why us?</h2>
-                     <p><b>Customized Solutions at Costs:</b> We understand that every business is unique and has specific needs. Our solutions are tailor-made to meet your company's individual requirements. The best part is, we do this at an affordable cost, allowing you to benefit from top-notch solutions without exceeding your budget.</p>
-                     <p><b>Expertise and Professionalism: </b> We have a team of technology enthusiasts with extensive experience in developing solutions for small businesses. Our dedication ensures you'll receive professional service and results that drive your business forward. From conceptualization to implementation, we stand by your side every step of the way.</p>
-                     <p><b>Simplified Digital Transformation: </b> Technology is crucial in today's business world. By opting for our services, you're taking a significant step towards digital transformation. We provide you with the tools and strategies needed to enhance operational efficiency, boost productivity, and stand out in the market. Our mission is to pave the way for success in the digital age.</p>
+                     <h2>{{ __('why_us') }}</h2>
+                     <p>{{ __('why_us_description_cost') }}</p>
+                     <p>{{ __('why_us_description_Professionalism') }}</p>
+                     <p>{{ __('why_us_description_soport') }}</p>
+                     
                   </div>
                </div>
             </div>
@@ -195,23 +190,23 @@
                   <div class="service_main">
                      <div class="service_box yell_colo">
                         <i><img src="{{ asset('images/Idea.jpg') }}" alt="Customized Solutions at Affordable Costs"/></i>
-                        <h4>Idea</h4>
+                        <h4>{{ __('idea') }}</h4>
                      </div>
                      <div class="service_box yelldark_colo">
                         <i><img src="{{ asset('images/Digital_transformation.jpg') }}" alt=""/></i>
-                        <h4>Digital</h4>
+                        <h4>{{ __('digital') }}</h4>
                      </div>
                      <div class="service_box yell_colo">
                         <i><img src="{{ asset('images/Professionalism.jpg') }}" alt="Expertise and Professionalism"/></i>
-                        <h4>Professionalism</h4>
+                        <h4>{{ __('profesional') }}</h4>
                      </div>
                      <div class="service_box yelldark_colo">
                         <i><img src="{{ asset('images/Constant_Innovation.jpg') }}" alt="Constant Innovation"/></i>
-                        <h4>Innovation</h4>
+                        <h4>{{ __('innovation') }}</h4>
                      </div>
                      <div class="service_box yell_colo">
                         <i><img src="{{ asset('images/soport.jpg') }}" alt="soport"/></i>
-                        <h4>Soport</h4>
+                        <h4>{{ __('soport') }}</h4>
                      </div>
                   </div>
                </div>
@@ -223,21 +218,18 @@
                <div class="service_main">
                   <div class="service_box yell_colo">
                      <i><img src="{{ asset('images/Idea.jpg') }}" alt="Customized Solutions at Affordable Costs"/></i>
-                     <h4>Idea</h4>
+                     <h4>{{ __('idea') }}</h4>
                   </div>
                   <div class="service_box yelldark_colo">
                      <i><img src="{{ asset('images/Professionalism.jpg') }}" alt="Expertise and Professionalism"/></i>
-                        <h4>Professionalism</h4>
+                     <h4>{{ __('profesional') }}</h4>
                   </div>
                   <div class="service_box yell_colo">
                      <i><img src="{{ asset('images/soport.jpg') }}" alt="soport"/></i>
-                        <h4>Soport</h4>
+                     <h4>{{ __('soport') }}</h4>
                   </div>
                </div>
             </div>
-            <!-- <div class="col-md-12">
-               <a class="read_more" href="#">Read More</a>
-            </div> -->
          </div>
       </div>
       </div>
@@ -248,9 +240,9 @@
             <div class="row">
                <div class="col-md-12">
                   <div class="titlepage">
-                     <h2>Our Services</h2>
+                     <h2>{{ __('our_services') }}</h2>
                      <p>
-                        At <b>Q bits inc dev</b>, we believe that technology should not be limited to a select few. That's why we've crafted innovative, affordable, and easily accessible solutions that are within everyone's reach. With our budget-friendly subscription, you'll gain full access to our advanced tools, designed to transform your business without straining your budget.
+                        {{ __('our_services_description') }}
                      </p>
                   </div>
                </div>
@@ -277,7 +269,6 @@
                               <div class="vehicles_truck">
                                  <figure><img src="{{ asset('images/about.png') }}" alt="#"/></figure>
                               </div>
-                              <!-- <h3 class="blac_co">Truck</h3> -->
                            </div>
                            <div class="col-md-4">
                               <div class="vehicles_truck">
@@ -304,7 +295,7 @@
             <div class="row">
                <div class="col-md-12">
                   <div class="titlepage">
-                     <h2>Why Choose Us</h2>
+                     <h2>{{ __('why_choose_us') }}</h2>
                   </div>
                </div>
             </div>
@@ -312,18 +303,18 @@
                <div class="col-md-5">
                   <div class="choose_box">
                      <i><img src="{{ asset('images/why1.png') }}" alt="#"/></i>
-                     <h3>Our Vission</h3>
+                     <h3>{{ __('our_vission') }}</h3>
                      <p>
-                        "At <b>Q bits inc dev</b>, our vision is to make technology a resource within everyone's reach. We create and develop innovative solutions that empower businesses, regardless of their size. We take pride in offering technological excellence at a cost that makes growth and success achievable for all."
+                        "{{ __('our_vission_description') }}"
                      </p>
                   </div>
                </div>
                <div class="col-md-5 offset-md-2">
                   <div class="choose_box">
                      <i><img src="{{ asset('images/why1.png') }}" alt="#"/></i>
-                     <h3>Our mission</h3>
+                     <h3>{{ __('our_mission') }}</h3>
                      <p>
-                        At <b>Q bits inc dev</b>, our mission is to demystify technology for businesses of all sizes. Through innovative and affordable solutions, we empower our clients to thrive in an ever-changing digital world. We drive growth, efficiency, and success at every step.
+                        "{{ __('our_mission_description') }}"
                      </p>
                   </div>
                </div>
@@ -337,7 +328,7 @@
             <div class="row">
                <div class="col-md-12">
                   <div class="titlepage">
-                     <h2>Request a Call on Your Behalf</h2>
+                     <h2>{{ __('contact_title') }}</h2>
                   </div>
                </div>
             </div>
@@ -349,19 +340,19 @@
                      <form id="request" class="main_form">
                         <div class="row">
                            <div class="col-md-12 ">
-                              <input class="contactus" placeholder="Name" type="type" name="Name"> 
+                              <input class="contactus" placeholder="{{ __('name') }}" type="type" name="name"> 
                            </div>
                            <div class="col-md-12">
-                              <input class="contactus" placeholder="Email" type="type" name="Email"> 
+                              <input class="contactus" placeholder="{{ __('email') }}" type="type" name="email"> 
                            </div>
                            <div class="col-md-12">
-                              <input class="contactus" placeholder="Phone Number" type="type" name="Phone Number">                          
+                              <input class="contactus" placeholder="{{ __('phone_number') }}" type="type" name="phone">                          
                            </div>
                            <div class="col-md-12">
-                              <input class="contactusmess" placeholder="Message" type="type" Message="Name">
+                              <input class="contactus" placeholder="{{ __('message') }}" type="type" Message="message">
                            </div>
                            <div class="col-md-12">
-                              <button class="send_btn">Send</button>
+                              <button class="send_btn">{{ __('send') }}</button>
                            </div>
                         </div>
                      </form>
@@ -396,7 +387,7 @@
                         </li>
                         <li style="display: block">
                            <i class="fa fa-solid fa-globe" style="color: #ff7900;"></i>
-                           <a >Principal</a>
+                           <a>Principal</a>
                         </li>
                      </ul>
                      {{-- <form class="bottom_form">
@@ -445,7 +436,7 @@
                   <div class="row">
                      <div class="col-md-12">
                         
-                        <p>© 2023 {{ __('copy') }}</p>
+                        <p>© {{ date('Y') }} {{ __('copyright') }}</p>
                      </div>
                   </div>
                </div>
