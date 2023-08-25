@@ -306,9 +306,6 @@ button {
 
 /*--      end sidebar  navigation--*/
 
-.logo {
-     /* padding-top: 12px; */
-}
 
 ul.conat_info li {
      display: inline-block;
@@ -473,10 +470,6 @@ img.image_desktop {
      margin-left: 50%;
  }
 
-.banner_slide {
-     /* background: #000; */
-     /* padding: 0 80px; */
-}
 
 .ban_track figure {
      margin: 0;

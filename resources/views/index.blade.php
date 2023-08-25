@@ -1,475 +1,175 @@
-<!DOCTYPE html>
-<html lang="en">
-   <head>
-      <!-- basic -->
-      <meta charset="utf-8">
-      <meta http-equiv="X-UA-Compatible" content="IE=edge">
-      <!-- mobile metas -->
-      <meta name="viewport" content="width=device-width, initial-scale=1">
-      <meta name="viewport" content="initial-scale=1, maximum-scale=1">
-      <!-- site metas -->
-      <title>Qbits inc | Home</title>
-      <meta name="keywords" content="">
-      <meta name="description" content="">
-      <meta name="author" content="">
-      <!-- bootstrap css -->
-      <link rel="stylesheet" href="{{ asset('css/bootstrap.min.css') }}">
-      <!-- style css -->
-      <link rel="stylesheet" href="{{ asset('css/style.css') }}">
-      <!-- Responsive-->
-      <link rel="stylesheet" href="{{ asset('css/responsive.css') }}">
-      <!-- fevicon -->
-      <link rel="icon" href="{{ asset('images/fevicon.png') }}" type="image/gif" />
-      <!-- Scrollbar Custom CSS -->
-      <link rel="stylesheet" href="{{ asset('css/jquery.mCustomScrollbar.min.css') }}">
-      <!-- Tweaks for older IEs-->
-      <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css">
-      
-      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.css" media="screen">
+@extends('template')
 
-      <link rel="preconnect" href="https://fonts.googleapis.com">
-      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-      <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@1,700&display=swap" rel="stylesheet">
-      
-      
-      <script src="https://kit.fontawesome.com/d9e42506e1.js" crossorigin="anonymous"></script>
-      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
-      
-   </head>
-   <!-- body -->
-   <body class="main-layout">
-      <span class="ir-arriba desktop mobile">
-         <i class="fa-solid fa-circle-up" style="color: #fff;font-size: 30px;padding-top: 10px;"></i>
-      </span>
-      <!-- loader  -->
-      <div class="loader_bg">
-         <div class="loader"><img src="{{ asset('images/loading.png') }}"/></div>
-      </div>
-      <!-- end loader -->
-      <div id="mySidepanel" class="sidepanel">
-         <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
-         <img src="{{ asset('images/loading.png') }}" alt="Qbits inc" style="padding: 5% 20%;">
-         <a href="{{ route('home') }}"> <i class="fa fa-solid fa-house" style="color: #e17900;" aria-hidden="true"></i> <span>Home </span></a>
-         <a href="#about" onclick="closeNav()"> <i class="fa-solid fa-user" style="color: #e17900;" aria-hidden="true"></i> <span>About</span></a>
-         <a href="#why_us" onclick="closeNav()"><i class="fa-solid fa-question" style="color: #e17900;"></i> <span>Why us?</span></a>
-         <a href="#contact" onclick="closeNav()"><i class="fa-solid fa-envelope" style="color: #e17900;"></i> <span>Contact</span> </a>
-         <div class="division"></div>
-         <div class="rrss_sidebar">
-            <a href="" target="_blank">
-               <i class="fa-brands fa-facebook" style="color: #ff7900;"></i>                           
-            </a>
-            <a href="https://www.instagram.com/qbitsdev/" target="_blank">
-               <i class="fa-brands fa-instagram" style="color: #ff7900;"></i>                           
-            </a>
-         </div>
-      </div>
-      <!-- header -->
-      <header>
-         <!-- header inner -->
-         <div class="header">
-            <div class="container-fluid">
-               <div class="row">
-                  <div class="col-md-4 col-sm-4">
-                     <div class="logo">
-                        <a href="{{ route('home')}}"><img src="{{ asset('images/logo.png') }}" alt="#" style="width: 150px;"/></a>
-                     </div>
-                  </div>
-                  <div class="col-md-8 col-sm-8">
-                     <div class="right_bottun">
-                        <a class="desktop" href="">
-                           <i class="fa-brands fa-facebook" style="color: #f5f3f2;"></i>                           
-                        </a>
-                        <a class="desktop" href="https://www.instagram.com/qbitsdev/" target="_blank">
-                           <i class="fa-brands fa-instagram" style="color: #f5f3f2;"></i>                           
-                        </a>
-                        {{-- @if(session('locale') == 'en')
-                           <a href="{{ route('change_language', 'es') }}">
-                              <img class="bandera" src="{{ asset('images/espana.png') }}" alt="español"/>
-                           </a>
-                        @else
-                           <a href="{{ route('change_language', 'en') }}">
-                              <img class="bandera" src="{{ asset('images/eeuu.png') }}" alt="ingles"/>
-                           </a>
-                        @endif --}}
-                        <div class="dropdown show">
-                              <i class="fa-solid fa-earth-americas" style="color: #f5f3f2;" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></i>
-                           <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-                              <a class="dropdown-item" href="{{ route('change_language', 'es') }}" ><img class="bandera" src="{{ asset('images/espana.png') }}" alt="español"/> {{ __('es') }} </a>
-                              <a class="dropdown-item" href="{{ route('change_language', 'en') }}"><img class="bandera" src="{{ asset('images/eeuu.png') }}" alt="ingles"/> {{ __('en') }}</a>
-                           </div>
-                        </div>
-                        <button class="openbtn" onclick="openNav()">
-                           <img class="desktop" src="{{ asset('images/menu_icon.png') }}" alt="#"/>
-                           <img class="movil" src="{{ asset('images/menu_icon_black.png') }}" alt="#"/>
-                        </button> 
-                     </div>
-                  </div>
-               </div>
-            </div>
-         </div>
-      </header>
-      <!-- end header inner -->
-      <!-- end header -->
-      <!-- banner -->
-      <section class="banner_main">
-         <div class="bg_img"></div>
-         <div class="header_banner text-center">
-            <div class="text-bg text-center">
-               <h1>
-                  "{{ __('banner_title') }}"
-               </h1>
-            </div>
-            <div class="ban_track">
-               <figure><img class="image_desktop" src="{{ asset('images/track.png') }}" alt="#" style="width: 300px;"/></figure>
-            </div>
-         </div>
-         <div id="banner1" class="carousel slide banner_slide" data-ride="carousel">
-            <ol class="carousel-indicators">
-               <li data-target="#banner1" data-slide-to="0" class="active"></li>
-            </ol>
-            <div class="carousel-inner">
-               <div class="carousel-item active">
-                  <div class="container-fluid">
-                     <div class="carousel-caption">
-                        <div class="row banner_shadow">
-                           <div class="col-md-7 col-lg-5">
-                              <div class="text-bg">
-                                 <h1>
-                                    "{{ __('banner_title') }}"
-                                 </h1>
-                              </div>
-                           </div>
-                           <div class="col-md-12 col-lg-7">
-                              <div class="row">
-                                 <div class="col-md-6">
-                                    <div class="ban_track">
-                                       <figure><img class="image_desktop" src="{{ asset('images/track.png') }}" alt="Q bits inc Dev"/></figure>
-                                    </div>
-                                 </div>
-                              </div>
-                           </div>
-                        </div>
-                     </div>
-                  </div>
-               </div>
-            </div>
-         </div>
-      </section>
-      <!-- end banner -->
-      <!-- about section -->
-      <div id="about" class="about ">
-         <div class="container">
-            <div class="row d_flex">
-               <div class="col-md-6">
-                  <div class="about_right">
-                     <figure><img src="{{ asset('images/about.png') }}" alt="#"/></figure>
-                  </div>
-               </div>
-               <div class="col-md-6">
-                  <div class="titlepage">
-                     <h2>{{ __('about_title') }}</h2>
-                     <p>
-                        {{ __('about_description') }}
-                     </p>
-                     <a class="read_more" href="#">{{ __('read_more') }}</a>
-                  </div>
-               </div>
-            </div>
-         </div>
-      </div>
-      <!-- about section -->
-      <!-- service section -->
-      <div id="why_us" class="service">
-         <div class="container">
-            <div class="row">
-               <div class="col-md-10 offset-md-1">
-                  <div class="titlepage">
-                     <h2>{{ __('why_us') }}</h2>
-                     <p>{{ __('why_us_description_cost') }}</p>
-                     <p>{{ __('why_us_description_Professionalism') }}</p>
-                     <p>{{ __('why_us_description_soport') }}</p>
-                     
-                  </div>
-               </div>
-            </div>
-            <div class="row desktop">
-               <div class="col-md-12">
-                  <div class="service_main">
-                     <div class="service_box yell_colo">
-                        <i><img src="{{ asset('images/Idea.jpg') }}" alt="Customized Solutions at Affordable Costs"/></i>
-                        <h4>{{ __('idea') }}</h4>
-                     </div>
-                     <div class="service_box yelldark_colo">
-                        <i><img src="{{ asset('images/Digital_transformation.jpg') }}" alt=""/></i>
-                        <h4>{{ __('digital') }}</h4>
-                     </div>
-                     <div class="service_box yell_colo">
-                        <i><img src="{{ asset('images/Professionalism.jpg') }}" alt="Expertise and Professionalism"/></i>
-                        <h4>{{ __('profesional') }}</h4>
-                     </div>
-                     <div class="service_box yelldark_colo">
-                        <i><img src="{{ asset('images/Constant_Innovation.jpg') }}" alt="Constant Innovation"/></i>
-                        <h4>{{ __('innovation') }}</h4>
-                     </div>
-                     <div class="service_box yell_colo">
-                        <i><img src="{{ asset('images/soport.jpg') }}" alt="soport"/></i>
-                        <h4>{{ __('soport') }}</h4>
-                     </div>
-                  </div>
-               </div>
-            </div>
-         </div>
+@section('title', 'Qbits | home')
 
-         <div class="row movil">
-            <div class="col-md-12">
-               <div class="service_main">
-                  <div class="service_box yell_colo">
+@section('banner_title')
+   "{{ __('banner_title') }}"
+@endsection
+
+@section('banner_image')
+   <img class="image_desktop" src="{{ asset('images/Qbits.png') }}" alt="Qbits inc technology"/>
+@endsection
+
+@section('about_section_secundary_image')
+   <img src="{{ asset('images/about.png') }}" alt="#"/>
+@endsection
+
+@section('about_section_secundary_title')
+   {{ __('about_title') }}
+@endsection
+
+@section('about_section_secundary_description')
+   {{ __('about_description') }}
+@endsection
+
+
+@section('about_section_secundary_read_more')
+   <a class="read_more" href="{{ route('about') }}">{{ __('read_more') }}</a>
+@endsection
+
+@section('why_us_main')
+<div id="why_us" class="service">
+   <div class="container">
+         <div class="row">
+         <div class="col-md-10 offset-md-1">
+            <div class="titlepage">
+               <h2>{{ __('why_us') }}</h2>
+               <p>{{ __('why_us_description_cost') }}</p>
+               <p>{{ __('why_us_description_Professionalism') }}</p>
+               <p>{{ __('why_us_description_soport') }}</p>
+               
+            </div>
+         </div>
+         </div>
+         <div class="row desktop">
+         <div class="col-md-12">
+            <div class="service_main">
+               <div class="service_box yell_colo">
                      <i><img src="{{ asset('images/Idea.jpg') }}" alt="Customized Solutions at Affordable Costs"/></i>
                      <h4>{{ __('idea') }}</h4>
-                  </div>
-                  <div class="service_box yelldark_colo">
+               </div>
+               <div class="service_box yelldark_colo">
+                     <i><img src="{{ asset('images/Digital_transformation.jpg') }}" alt=""/></i>
+                     <h4>{{ __('digital') }}</h4>
+               </div>
+               <div class="service_box yell_colo">
                      <i><img src="{{ asset('images/Professionalism.jpg') }}" alt="Expertise and Professionalism"/></i>
                      <h4>{{ __('profesional') }}</h4>
-                  </div>
-                  <div class="service_box yell_colo">
+               </div>
+               <div class="service_box yelldark_colo">
+                     <i><img src="{{ asset('images/Constant_Innovation.jpg') }}" alt="Constant Innovation"/></i>
+                     <h4>{{ __('innovation') }}</h4>
+               </div>
+               <div class="service_box yell_colo">
                      <i><img src="{{ asset('images/soport.jpg') }}" alt="soport"/></i>
                      <h4>{{ __('soport') }}</h4>
-                  </div>
                </div>
             </div>
          </div>
-      </div>
-      </div>
-      <!-- end service section -->
-      <!-- vehicles section -->
-      <section id="servicess" class="vehicles">
-         <div class="container">
-            <div class="row">
-               <div class="col-md-12">
-                  <div class="titlepage">
-                     <h2>{{ __('our_services') }}</h2>
-                     <p>
-                        {{ __('our_services_description') }}
-                     </p>
-                  </div>
-               </div>
-            </div>
          </div>
-         <div id="veh" class="carousel slide" data-ride="carousel">
-            <ol class="carousel-indicators">
-               <li data-target="#veh" data-slide-to="0" class="active"></li>
-               <li data-target="#veh" data-slide-to="1"></li>
-               <li data-target="#veh" data-slide-to="2"></li>
-            </ol>
+   </div>
 
-            <div class="carousel-inner">
-               <div class="carousel-item active">
-                  <div class="container">
-                     <div class="carousel-caption">
-                        <div class="row">
-                           <div class="col-md-4">
-                              <div class="vehicles_truck">
-                                 <figure><img src="{{ asset('images/about.png') }}" alt="#"/></figure>
-                              </div>
-                           </div>
-                           <div class="col-md-4">
-                              <div class="vehicles_truck">
-                                 <figure><img src="{{ asset('images/about.png') }}" alt="#"/></figure>
-                              </div>
-                           </div>
-                           <div class="col-md-4">
-                              <div class="vehicles_truck">
-                                 <figure><img src="{{ asset('images/about.png') }}" alt="#"/></figure>
-                              </div>
-                           </div>
-                        </div>
-                     </div>
-                  </div>
-               </div>
+   <div class="row movil">
+         <div class="col-md-12">
+         <div class="service_main">
+            <div class="service_box yell_colo">
+               <i><img src="{{ asset('images/Idea.jpg') }}" alt="Customized Solutions at Affordable Costs"/></i>
+               <h4>{{ __('idea') }}</h4>
             </div>
-            {{-- <a class="carousel-control-prev" href="#veh" role="button" data-slide="prev">
-            <i class="fa fa-angle-left" aria-hidden="true"></i>
-            </a>
-            <a class="carousel-control-next" href="#veh" role="button" data-slide="next">
-            <i class="fa fa-angle-right" aria-hidden="true"></i>
-            </a> --}}
+            <div class="service_box yelldark_colo">
+               <i><img src="{{ asset('images/Professionalism.jpg') }}" alt="Expertise and Professionalism"/></i>
+               <h4>{{ __('profesional') }}</h4>
+            </div>
+            <div class="service_box yell_colo">
+               <i><img src="{{ asset('images/soport.jpg') }}" alt="soport"/></i>
+               <h4>{{ __('soport') }}</h4>
+            </div>
          </div>
-      </section>
-      <!-- end vehicles section -->
-      <!-- choose section -->
-      <div class="choose">
-         <div class="container">
-            <div class="row">
-               <div class="col-md-12">
-                  <div class="titlepage">
-                     <h2>{{ __('why_choose_us') }}</h2>
-                  </div>
-               </div>
-            </div>
-            <div class="row">
-               <div class="col-md-5">
-                  <div class="choose_box">
-                     <i><img src="{{ asset('images/why1.png') }}" alt="#"/></i>
-                     <h3>{{ __('our_vission') }}</h3>
-                     <p>
-                        "{{ __('our_vission_description') }}"
-                     </p>
-                  </div>
-               </div>
-               <div class="col-md-5 offset-md-2">
-                  <div class="choose_box">
-                     <i><img src="{{ asset('images/why1.png') }}" alt="#"/></i>
-                     <h3>{{ __('our_mission') }}</h3>
-                     <p>
-                        "{{ __('our_mission_description') }}"
-                     </p>
-                  </div>
-               </div>
+         </div>
+   </div>
+</div>
+@endsection
+
+@section('our_services')
+<section id="servicess" class="vehicles">
+   <div class="container">
+      <div class="row">
+         <div class="col-md-12">
+            <div class="titlepage">
+               <h2>{{ __('our_services') }}</h2>
+               <p>
+                  {{ __('our_services_description') }}
+               </p>
             </div>
          </div>
       </div>
-      <!-- end choose section -->
-      <!-- contact section -->
-      <div id="contact" class="contact">
-         <div class="container">
-            <div class="row">
-               <div class="col-md-12">
-                  <div class="titlepage">
-                     <h2>{{ __('contact_title') }}</h2>
-                  </div>
-               </div>
-            </div>
-         </div>
-         <div class="con_bg">
-            <div class="container-fluid">
-               <div class="row">
-                  <div class="col-md-5">
-                     <form id="request" class="main_form">
-                        <div class="row">
-                           <div class="col-md-12 ">
-                              <input class="contactus" placeholder="{{ __('name') }}" type="type" name="name"> 
-                           </div>
-                           <div class="col-md-12">
-                              <input class="contactus" placeholder="{{ __('email') }}" type="type" name="email"> 
-                           </div>
-                           <div class="col-md-12">
-                              <input class="contactus" placeholder="{{ __('phone_number') }}" type="type" name="phone">                          
-                           </div>
-                           <div class="col-md-12">
-                              <input class="contactus" placeholder="{{ __('message') }}" type="type" Message="message">
-                           </div>
-                           <div class="col-md-12">
-                              <button class="send_btn">{{ __('send') }}</button>
-                           </div>
-                        </div>
-                     </form>
-                  </div>
-                  <div class="col-md-7">
-                     <div class="co_tru">
-                        <figure><img src="{{ asset('images/logo.png') }}" alt="#"/></figure>
-                     </div>
-                  </div>
-               </div>
-            </div>
-         </div>
-      </div>
-      <!-- end contact section -->
-      <!--  footer -->
-      <footer>
-         <div class="footer bottom_cross1">
+   </div>
+   <div id="veh" class="carousel slide" data-ride="carousel">
+      <ol class="carousel-indicators">
+         <li data-target="#veh" data-slide-to="0" class="active"></li>
+         <li data-target="#veh" data-slide-to="1"></li>
+         <li data-target="#veh" data-slide-to="2"></li>
+      </ol>
+
+      <div class="carousel-inner">
+         <div class="carousel-item active">
             <div class="container">
-               <div class="row">
-                  <div class="col-md-4">
-                     <ul class="location_icon">
-                        <li>
-                           <i class="fa fa-map-marker" style="color: #ff7900;" aria-hidden="true"></i>
-                           <a>Florida, Miami, 150 Se 2nd Ave Ste 300</a>
-                        </li>
-                        <li><i class="fa fa-phone" style="color: #ff7900;" aria-hidden="true"></i>
-                           <a href="https://api.whatsapp.com/send/?phone=17865719783&text=Hello,%20I%20would%20like%20to%20know%20about%20your%20services&type=phone_number&app_absent=0" target="_blank">+1 7865719783</a>
-                        </li>
-                        <li>
-                           <i class="fa fa-envelope" style="color: #ff7900;" aria-hidden="true"></i>
-                           <a href="mailto:contactus@qbitsinc.com">contactus@qbitsinc.com</a>
-                        </li>
-                        <li style="display: block">
-                           <i class="fa fa-solid fa-globe" style="color: #ff7900;"></i>
-                           <a>Principal</a>
-                        </li>
-                     </ul>
-                     {{-- <form class="bottom_form">
-                         no de momento, puedes escribir al correo si desea informaciòn
-                        <h3>Newsletter</h3>
-                        <input class="enter" placeholder="Enter your email" type="text" name="Enter your email">
-                        <button class="sub_btn">subscribe</button>
-                     </form> --}}
-                  </div>
-                  <div class="col-md-4">
-                     <ul class="location_icon">
-                        <li>
-                           <i class="fa fa-map-marker" style="color: #ff7900;" aria-hidden="true"></i>
-                           <a>Anzoátegui, Lechería, Av. Principal de Lechería.
-                              Centro Empresarial Y2K. Piso 1- Oficina 1-2</a>
-                        </li>
-                        <li><i class="fa fa-phone" style="color: #ff7900;" aria-hidden="true"></i>
-                           <a href="https://api.whatsapp.com/send/?phone=584248675340&text=hola%20me%20gustaria%20saber%20de%20sus%20servicio&type=phone_number&app_absent=0" target="_blank">+58 424-8675340</a>
-                        </li>
-                     </ul>
-                  </div>
-                  <div class="col-md-4">
-                     <div class="map">
-                        <div class="bg_maps">
-                           <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3592.9290299041622!2d-80.19312332387068!3d25.77290760814072!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88d9b69c4a40298d%3A0x98ca6dd47456810d!2s150%20SE%202nd%20Ave%20Ste%20300%2C%20Miami%2C%20FL%2033131%2C%20EE.%20UU.!5e0!3m2!1ses!2sve!4v1692803903513!5m2!1ses!2sve" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+               <div class="carousel-caption">
+                  <div class="row">
+                     <div class="col-md-4">
+                        <div class="vehicles_truck">
+                           <figure><img src="{{ asset('images/about.png') }}" alt="#"/></figure>
                         </div>
-                        {{-- <figure><img src="{{ asset('images/map.png') }}" alt="#"/></figure> --}}
                      </div>
-                  </div>
-               </div>
-            </div>
-            <div class="rrss">
-               <div class="container">
-                  <div class="row">
-                     <div class="col-md-12">
-                        <i class="fa-brands fa-facebook" style="color: #ff7900;"></i>
-                        <a href="https://www.instagram.com/qbitsdev/" target="_blank">
-                           <i class="fa-brands fa-instagram" style="color: #ff7900;"></i>                           
-                        </a>
+                     <div class="col-md-4">
+                        <div class="vehicles_truck">
+                           <figure><img src="{{ asset('images/about.png') }}" alt="#"/></figure>
+                        </div>
                      </div>
-                  </div>
-               </div>
-            </div>
-            <div class="copyright">
-               <div class="container">
-                  <div class="row">
-                     <div class="col-md-12">
-                        
-                        <p>© {{ date('Y') }} {{ __('copyright') }}</p>
+                     <div class="col-md-4">
+                        <div class="vehicles_truck">
+                           <figure><img src="{{ asset('images/about.png') }}" alt="#"/></figure>
+                        </div>
                      </div>
                   </div>
                </div>
             </div>
          </div>
-      </footer>
-      <!-- end footer -->
-      <!-- Javascript files-->
-      <script src="{{ asset('js/jquery.min.js') }}"></script>
-      <script src="{{ asset('js/popper.min.js') }}"></script>
-      <script src="{{ asset('js/bootstrap.bundle.min.js') }}"></script>
-      <script src="{{ asset('js/jquery-3.0.0.min.js') }}"></script>
-      <!-- sidebar -->
-      <script src="{{ asset('js/jquery.mCustomScrollbar.concat.min.js') }}"></script>
-      <script src="{{ asset('js/custom.js') }}"></script>
-      <script src="{{ asset('js/menu_fixed.js') }}"></script>
-      <script src="{{ asset('js/buton_up.js') }}"></script>
-      <script>
-         function openNav() {
-           document.getElementById("mySidepanel").style.width = "250px";
-         }
-         
-         function closeNav() {
-           document.getElementById("mySidepanel").style.width = "0";
-         }
-      </script>
-   </body>
-</html>
+      </div>
+   </div>
+</section>
+@endsection
 
+@section('choose')
+<div class="choose">
+   <div class="container">
+      <div class="row">
+         <div class="col-md-12">
+            <div class="titlepage">
+               <h2>{{ __('why_choose_us') }}</h2>
+            </div>
+         </div>
+      </div>
+      <div class="row">
+         <div class="col-md-5">
+            <div class="choose_box">
+               <i><img src="{{ asset('images/why1.png') }}" alt="#"/></i>
+               <h3>{{ __('our_vission') }}</h3>
+               <p>
+                  "{{ __('our_vission_description') }}"
+               </p>
+            </div>
+         </div>
+         <div class="col-md-5 offset-md-2">
+            <div class="choose_box">
+               <i><img src="{{ asset('images/why1.png') }}" alt="#"/></i>
+               <h3>{{ __('our_mission') }}</h3>
+               <p>
+                  "{{ __('our_mission_description') }}"
+               </p>
+            </div>
+         </div>
+      </div>
+   </div>
+</div>
+@endsection

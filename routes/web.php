@@ -17,8 +17,6 @@ use Illuminate\Support\Facades\App;
 */
 
 Route::get('/', [HomeController::class, 'index'])->name('home');
+Route::get('/about', [HomeController::class, 'about'])->name('about');
 
-Route::get('/lang/{locale}', function($locale){
-    session()->put('locale', $locale);
-    return Redirect::back();
-})->name('change_language');
+Route::get('/lang/{locale}', [HomeController::class, 'changeLang'])->name('change_language');
