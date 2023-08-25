@@ -24,7 +24,7 @@
    </head>
    <body class="main-layout">
       <span class="ir-arriba desktop mobile">
-         <i class="fa-solid fa-circle-up" style="color: #fff;font-size: 30px;padding-top: 10px;"></i>
+         <i class="fa-solid fa-chevron-up" style="color: rgb(255, 121, 0);font-size: 30px;padding-top: 10px;"></i>
       </span>
       <div class="loader_bg">
          <div class="loader"><img src="{{ asset('images/loading.png') }}"/></div>
@@ -35,7 +35,8 @@
          <a href="{{ route('home') }}"> <i class="fa fa-solid fa-house" style="color: #e17900;" aria-hidden="true"></i> <span>Home </span></a>
          <a href="#about" onclick="closeNav()"> <i class="fa-solid fa-user" style="color: #e17900;" aria-hidden="true"></i> <span>About</span></a>
          <a href="#why_us" onclick="closeNav()"><i class="fa-solid fa-question" style="color: #e17900;"></i> <span>Why us?</span></a>
-         <a href="#" onclick="closeNav()"><i class="fa-solid fa-newspaper" style="color: #e17900;"></i> <span>Block</span> </a>
+         <a href="#services" onclick="closeNav()"><i class="fa-solid fa-display" style="color: #e17900;"></i> <span>Services</span></a>
+         <a href="#" onclick="closeNav()"><i class="fa-solid fa-newspaper" style="color: #e17900;"></i> <span>Blog</span> </a>
          <a href="#contact" onclick="closeNav()"><i class="fa-solid fa-envelope" style="color: #e17900;"></i> <span>Contact</span> </a>
          <div class="division"></div>
          <div class="rrss_sidebar">
@@ -106,12 +107,8 @@
                               </div>
                            </div>
                            <div class="col-md-12 col-lg-7">
-                              <div class="row">
-                                 <div class="col-md-6">
-                                    <div class="ban_track">
-                                       <figure>@yield('banner_image')</figure>
-                                    </div>
-                                 </div>
+                              <div class="img_banner">
+                                 <figure>@yield('banner_image')</figure>
                               </div>
                            </div>
                         </div>
@@ -123,7 +120,7 @@
       </section>
       
       
-      <div id="about" class="about ">
+      <div id="about" class="about text-justify">
          <div class="container">
             <div class="row d_flex">
                <div class="col-md-6">
@@ -142,6 +139,7 @@
             </div>
          </div>
       </div>
+
       @yield('why_us_main')
       @yield('our_services')
       @yield('choose')
@@ -172,7 +170,7 @@
                               <input class="contactus" placeholder="{{ __('phone_number') }}" type="type" name="phone">                          
                            </div>
                            <div class="col-md-12">
-                              <input class="contactus" placeholder="{{ __('message') }}" type="type" Message="message">
+                              <textarea class="contactus contactus_textarea" placeholder="{{ __('write_message')}}"></textarea>
                            </div>
                            <div class="col-md-12">
                               <button class="send_btn">{{ __('send') }}</button>
@@ -194,6 +192,7 @@
             <div class="container">
                <div class="row">
                   <div class="col-md-4">
+                     <h1>{{ __('Principal') }}</h1>
                      <ul class="location_icon">
                         <li>
                            <i class="fa fa-map-marker" style="color: #ff7900;" aria-hidden="true"></i>
@@ -206,10 +205,6 @@
                            <i class="fa fa-envelope" style="color: #ff7900;" aria-hidden="true"></i>
                            <a href="mailto:contactus@qbitsinc.com">contactus@qbitsinc.com</a>
                         </li>
-                        <li style="display: block">
-                           <i class="fa fa-solid fa-globe" style="color: #ff7900;"></i>
-                           <a>Principal</a>
-                        </li>
                      </ul>
                      {{-- <form class="bottom_form">
                          no de momento, puedes escribir al correo si desea informaciòn
@@ -219,6 +214,7 @@
                      </form> --}}
                   </div>
                   <div class="col-md-4">
+                     <h1>{{ __('Sucursal') }}</h1>
                      <ul class="location_icon">
                         <li>
                            <i class="fa fa-map-marker" style="color: #ff7900;" aria-hidden="true"></i>

@@ -3,7 +3,7 @@
 @section('title', 'Qbits | home')
 
 @section('banner_title')
-   "{{ __('banner_title') }}"
+   "{!! __('banner_title') !!}"
 @endsection
 
 @section('banner_image')
@@ -11,7 +11,7 @@
 @endsection
 
 @section('about_section_secundary_image')
-   <img src="{{ asset('images/about.png') }}" alt="#"/>
+   <img class="about_image" src="{{ asset('images/about.png') }}" alt="#"/>
 @endsection
 
 @section('about_section_secundary_title')
@@ -19,7 +19,7 @@
 @endsection
 
 @section('about_section_secundary_description')
-   {{ __('about_description') }}
+   {!! __('about_description') !!}
 @endsection
 
 
@@ -28,15 +28,15 @@
 @endsection
 
 @section('why_us_main')
-<div id="why_us" class="service">
-   <div class="container">
+<div id="why_us" class="service ">
+   <div class="container text-justify">
          <div class="row">
-         <div class="col-md-10 offset-md-1">
+         <div class="col-md-12">
             <div class="titlepage">
                <h2>{{ __('why_us') }}</h2>
-               <p>{{ __('why_us_description_cost') }}</p>
-               <p>{{ __('why_us_description_Professionalism') }}</p>
-               <p>{{ __('why_us_description_soport') }}</p>
+               <p class="text-justify">{!! __('why_us_description_cost') !!}</p>
+               <p class="text-justify">{!! __('why_us_description_Professionalism') !!}</p>
+               <p class="text-justify">{!! __('why_us_description_soport') !!}</p>
                
             </div>
          </div>
@@ -44,25 +44,21 @@
          <div class="row desktop">
          <div class="col-md-12">
             <div class="service_main">
-               <div class="service_box yell_colo">
-                     <i><img src="{{ asset('images/Idea.jpg') }}" alt="Customized Solutions at Affordable Costs"/></i>
+               <div class="service_box ">
+                     <i><img src="{{ asset('images/why_us/idea.png') }}" alt="Customized Solutions at Affordable Costs"/></i>
                      <h4>{{ __('idea') }}</h4>
                </div>
-               <div class="service_box yelldark_colo">
-                     <i><img src="{{ asset('images/Digital_transformation.jpg') }}" alt=""/></i>
+               <div class="service_box ">
+                     <i><img src="{{ asset('images/why_us/professional.png') }}" alt=""/></i>
                      <h4>{{ __('digital') }}</h4>
                </div>
-               <div class="service_box yell_colo">
-                     <i><img src="{{ asset('images/Professionalism.jpg') }}" alt="Expertise and Professionalism"/></i>
+               <div class="service_box ">
+                     <i><img src="{{ asset('images/why_us/innovation.png') }}" alt="Expertise and Professionalism"/></i>
                      <h4>{{ __('profesional') }}</h4>
                </div>
-               <div class="service_box yelldark_colo">
-                     <i><img src="{{ asset('images/Constant_Innovation.jpg') }}" alt="Constant Innovation"/></i>
-                     <h4>{{ __('innovation') }}</h4>
-               </div>
-               <div class="service_box yell_colo">
-                     <i><img src="{{ asset('images/soport.jpg') }}" alt="soport"/></i>
-                     <h4>{{ __('soport') }}</h4>
+               <div class="service_box ">
+                  <i><img src="{{ asset('images/why_us/soport.png') }}" alt="soport"/></i>
+                  <h4>{{ __('soport') }}</h4>
                </div>
             </div>
          </div>
@@ -72,16 +68,16 @@
    <div class="row movil">
          <div class="col-md-12">
          <div class="service_main">
-            <div class="service_box yell_colo">
-               <i><img src="{{ asset('images/Idea.jpg') }}" alt="Customized Solutions at Affordable Costs"/></i>
+            <div class="service_box">
+               <i><img src="{{ asset('images/why_us/idea.png') }}" alt="Customized Solutions at Affordable Costs"/></i>
                <h4>{{ __('idea') }}</h4>
             </div>
-            <div class="service_box yelldark_colo">
-               <i><img src="{{ asset('images/Professionalism.jpg') }}" alt="Expertise and Professionalism"/></i>
+            <div class="service_box">
+               <i><img src="{{ asset('images/why_us/professional.png') }}" alt="Expertise and Professionalism"/></i>
                <h4>{{ __('profesional') }}</h4>
             </div>
-            <div class="service_box yell_colo">
-               <i><img src="{{ asset('images/soport.jpg') }}" alt="soport"/></i>
+            <div class="service_box">
+               <i><img src="{{ asset('images/why_us/soport.png') }}" alt="soport"/></i>
                <h4>{{ __('soport') }}</h4>
             </div>
          </div>
@@ -91,15 +87,13 @@
 @endsection
 
 @section('our_services')
-<section id="servicess" class="vehicles">
+<section id="services" class="vehicles">
    <div class="container">
       <div class="row">
          <div class="col-md-12">
             <div class="titlepage">
                <h2>{{ __('our_services') }}</h2>
-               <p>
-                  {{ __('our_services_description') }}
-               </p>
+               <p class="text-justify">{!! __('our_services_description') !!}</p>
             </div>
          </div>
       </div>
@@ -113,22 +107,23 @@
 
       <div class="carousel-inner">
          <div class="carousel-item active">
-            <div class="container">
+            <div class="container text-center">
                <div class="carousel-caption">
-                  <div class="row">
+                  <div class="row align-items-center">
                      <div class="col-md-4">
-                        <div class="vehicles_truck">
-                           <figure><img src="{{ asset('images/about.png') }}" alt="#"/></figure>
+                        <div class="our_services">
+                           <figure><img src="{{ asset('images/services/web_site.svg') }}" alt="#"/></figure>
+                           
                         </div>
                      </div>
                      <div class="col-md-4">
-                        <div class="vehicles_truck">
-                           <figure><img src="{{ asset('images/about.png') }}" alt="#"/></figure>
+                        <div class="our_services">
+                           <figure><img src="{{ asset('images/services/mobile_app.svg') }}" alt="#"/></figure>
                         </div>
                      </div>
                      <div class="col-md-4">
-                        <div class="vehicles_truck">
-                           <figure><img src="{{ asset('images/about.png') }}" alt="#"/></figure>
+                        <div class="our_services">
+                           <figure><img src="{{ asset('images/services/developer.svg') }}" alt="#"/></figure>
                         </div>
                      </div>
                   </div>
@@ -155,18 +150,14 @@
             <div class="choose_box">
                <i><img src="{{ asset('images/why1.png') }}" alt="#"/></i>
                <h3>{{ __('our_vission') }}</h3>
-               <p>
-                  "{{ __('our_vission_description') }}"
-               </p>
+               <p class="text-justify">"{!! __('our_vission_description') !!}"</p>
             </div>
          </div>
          <div class="col-md-5 offset-md-2">
             <div class="choose_box">
                <i><img src="{{ asset('images/why1.png') }}" alt="#"/></i>
                <h3>{{ __('our_mission') }}</h3>
-               <p>
-                  "{{ __('our_mission_description') }}"
-               </p>
+               <p class="text-justify">"{!! __('our_mission_description') !!}"</p>
             </div>
          </div>
       </div>

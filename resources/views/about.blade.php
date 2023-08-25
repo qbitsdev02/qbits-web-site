@@ -15,5 +15,5 @@
 @endsection
 
 @section('about_section_secundary_description')
-   {{ __('about_description') }}
+   {!! __('about.about_description_detail') !!}
 @endsection
