@@ -32,12 +32,12 @@
       <div id="mySidepanel" class="sidepanel">
          <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
          <img src="{{ asset('images/loading.png') }}" alt="Qbits inc" style="padding: 5% 20%;">
-         <a href="{{ route('home') }}"> <i class="fa fa-solid fa-house" style="color: #e17900;" aria-hidden="true"></i> <span>Home </span></a>
-         <a href="#about" onclick="closeNav()"> <i class="fa-solid fa-user" style="color: #e17900;" aria-hidden="true"></i> <span>About</span></a>
-         <a href="#why_us" onclick="closeNav()"><i class="fa-solid fa-question" style="color: #e17900;"></i> <span>Why us?</span></a>
-         <a href="#services" onclick="closeNav()"><i class="fa-solid fa-display" style="color: #e17900;"></i> <span>Services</span></a>
-         <a href="#" onclick="closeNav()"><i class="fa-solid fa-newspaper" style="color: #e17900;"></i> <span>Blog</span> </a>
-         <a href="#contact" onclick="closeNav()"><i class="fa-solid fa-envelope" style="color: #e17900;"></i> <span>Contact</span> </a>
+         <a href="{{ route('home') }}"> <i class="fa fa-solid fa-house" style="color: #e17900;" aria-hidden="true"></i> <span>{{ __('home') }}</span></a>
+         <a href="#about" onclick="closeNav()"> <i class="fa-solid fa-user" style="color: #e17900;" aria-hidden="true"></i> <span>{{ __('about') }}</span></a>
+         <a href="#why_us" onclick="closeNav()"><i class="fa-solid fa-question" style="color: #e17900;"></i> <span>{{ __('why_us') }}</span></a>
+         <a href="#services" onclick="closeNav()"><i class="fa-solid fa-display" style="color: #e17900;"></i> <span>{{ __('services') }}</span></a>
+         <a href="#" onclick="closeNav()"><i class="fa-solid fa-newspaper" style="color: #e17900;"></i> <span>{{ __('blog') }}</span> </a>
+         <a href="#contact" onclick="closeNav()"><i class="fa-solid fa-envelope" style="color: #e17900;"></i> <span>{{ __('contact') }}</span> </a>
          <div class="division"></div>
          <div class="rrss_sidebar">
             <a href="" target="_blank">

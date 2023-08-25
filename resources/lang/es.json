@@ -25,6 +25,11 @@
     "message" : "mensaje",
     "send" : "enviar",
     "write_message" : "Déjanos tu mensaje...",
+    "home" : "Inicio",
+    "about" : "Acerca de",
+    "services" : "Servicio",
+    "blog" : "Blog",
+    "contact" : "Contacto",
 
     "read_more" : "Leer Mas",
     "copyright" : "Todos los derechos reservados. qbitsinc.com",
