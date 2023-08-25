@@ -26,5 +26,8 @@
     "send" : "enviar",
 
     "read_more" : "Leer Mas",
-    "copyright" : "Todos los derechos reservados. qbitsinc.com"
+    "copyright" : "Todos los derechos reservados. qbitsinc.com",
+
+    "es" : "español",
+    "en" : "ingles"
 }

@@ -337,6 +337,12 @@ ul.conat_info li a:hover {
      margin-top: 10px;
 }
 
+.dropdown i{
+     font-size: 30px;
+     margin-right: 30px;
+     margin-top: 10px;
+}
+
 
 .header {
      position: fixed;
@@ -390,7 +396,7 @@ ul.conat_info li a:hover {
 }
 
 .bandera{
-     width: 100%;
+     width: 40px;
      padding: 10px;
 }
 

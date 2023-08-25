@@ -82,7 +82,7 @@
                         <a class="desktop" href="https://www.instagram.com/qbitsdev/" target="_blank">
                            <i class="fa-brands fa-instagram" style="color: #f5f3f2;"></i>                           
                         </a>
-                        @if(session('locale') == 'en')
+                        {{-- @if(session('locale') == 'en')
                            <a href="{{ route('change_language', 'es') }}">
                               <img class="bandera" src="{{ asset('images/espana.png') }}" alt="español"/>
                            </a>
@@ -90,7 +90,14 @@
                            <a href="{{ route('change_language', 'en') }}">
                               <img class="bandera" src="{{ asset('images/eeuu.png') }}" alt="ingles"/>
                            </a>
-                        @endif
+                        @endif --}}
+                        <div class="dropdown show">
+                              <i class="fa-solid fa-earth-americas" style="color: #f5f3f2;" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></i>
+                           <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                              <a class="dropdown-item" href="{{ route('change_language', 'es') }}" ><img class="bandera" src="{{ asset('images/espana.png') }}" alt="español"/> {{ __('es') }} </a>
+                              <a class="dropdown-item" href="{{ route('change_language', 'en') }}"><img class="bandera" src="{{ asset('images/eeuu.png') }}" alt="ingles"/> {{ __('en') }}</a>
+                           </div>
+                        </div>
                         <button class="openbtn" onclick="openNav()">
                            <img class="desktop" src="{{ asset('images/menu_icon.png') }}" alt="#"/>
                            <img class="movil" src="{{ asset('images/menu_icon_black.png') }}" alt="#"/>
