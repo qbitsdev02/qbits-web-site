@@ -31,10 +31,12 @@
     "blog" : "Blog",
     "contact" : "Contacto",
     "clean" : "Limpiar",
+    "principal" : "Principal",
+    "office" : "Sucursal",
 
     "read_more" : "Leer Mas",
     "copyright" : "Todos los derechos reservados. qbitsinc.com",
 
     "es" : "español",
-    "en" : "ingles"
+    "en" : "inglés"
 }

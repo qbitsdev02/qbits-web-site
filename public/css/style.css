@@ -194,6 +194,11 @@ img {
 
 }
 
+.mobile_drop i{
+     margin: 5px;
+     color: rgb(245, 243, 242);
+ }
+
 .badge {
      font-weight: 500;
 }
@@ -404,7 +409,7 @@ ul.conat_info li a:hover {
      padding: 250px 0px 0px 0px;
      background-size: 65%;
      background-repeat: no-repeat;
-     min-height: 1150px;
+     /* min-height: 1150px; */
      background-position: right top;
 }
 
@@ -433,10 +438,11 @@ ul.conat_info li a:hover {
 
 .banner_shadow{
      background: rgba(255, 158, 0, 0.2);
+     margin-bottom: 200px;
 }
 
 .text-bg {
-     margin: 20px 100px;
+     margin: 20px 50px;
      text-align: left;
 }
 
@@ -446,7 +452,7 @@ ul.conat_info li a:hover {
 
 .text-bg h1 {
      color: #f4f1f7;
-    font-size: 80px;
+    font-size: 50px;
     line-height: 100px;
     padding-bottom: 45px;
     font-weight: bold;

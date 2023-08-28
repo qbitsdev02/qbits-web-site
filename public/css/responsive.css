@@ -249,7 +249,7 @@
     }
     .text-bg {
         max-width: inherit;
-        margin: 0px;
+        margin-bottom: 200px;
     }
     .transfot {
         padding-top: 30px;
@@ -260,8 +260,12 @@
 
     .mobile_drop i{
         margin: 5px;
+        color: rgb(0, 0, 0);
     }
 
+    .send_btn, .clean_btn{
+        width: 100%;
+    }
 
     .about_image{
         padding: 10px;
@@ -269,13 +273,12 @@
 
     .text-bg h1 {
         font-size: 30px;
-    color: #ffffff;
-    padding-bottom: 45px;
-    margin-top: 25%;
-    font-weight: bold;
-    text-shadow: 2px 2px #975cdb;
-    background: rgba(255, 158, 0,0.5);
-    padding: 0 50px;
+        color: #ffffff;
+        padding-bottom: 45px;
+        margin-top: 25%;
+        font-weight: bold;
+        text-shadow: 2px 2px #975cdb;
+        line-height: 80px;
     }
 
     .desktop{display: none;}

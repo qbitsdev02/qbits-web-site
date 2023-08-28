@@ -66,7 +66,7 @@
                            <i class="fa-brands fa-instagram" style="color: #f5f3f2;"></i>                           
                         </a>
                         <div class="dropdown show mobile_drop">
-                              <i class="fa-solid fa-earth-americas" style="color: #f5f3f2;" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></i>
+                              <i class="fa-solid fa-earth-americas" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></i>
                            <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
                               <a class="dropdown-item" href="{{ route('change_language', 'es') }}" ><img class="bandera" src="{{ asset('images/espana.png') }}" alt="español"/> {{ __('es') }} </a>
                               <a class="dropdown-item" href="{{ route('change_language', 'en') }}"><img class="bandera" src="{{ asset('images/eeuu.png') }}" alt="ingles"/> {{ __('en') }}</a>
@@ -172,10 +172,10 @@
                            <div class="col-md-12">
                               <textarea class="contactus contactus_textarea" placeholder="{{ __('write_message')}}"></textarea>
                            </div>
-                           <div class="col-lg-6 col-md-12">
+                           <div class="col-lg-6 col-md-12 col-sm-12">
                               <button class="send_btn">{{ __('send') }}</button>
                            </div>
-                           <div class="col-lg-6 col-md-12">
+                           <div class="col-lg-6 col-md-12 col-sm-12">
                               <button type="reset" class="clean_btn">{{ __('Clean') }}</button>
                            </div>
                         </div>
@@ -195,7 +195,7 @@
             <div class="container">
                <div class="row">
                   <div class="col-md-4">
-                     <h1>{{ __('Principal') }}</h1>
+                     <h1>{{ __('principal') }}</h1>
                      <ul class="location_icon">
                         <li>
                            <i class="fa fa-map-marker" style="color: #ff7900;" aria-hidden="true"></i>
@@ -217,7 +217,7 @@
                      </form> --}}
                   </div>
                   <div class="col-md-4">
-                     <h1>{{ __('Sucursal') }}</h1>
+                     <h1>{{ __('office') }}</h1>
                      <ul class="location_icon">
                         <li>
                            <i class="fa fa-map-marker" style="color: #ff7900;" aria-hidden="true"></i>
@@ -255,7 +255,6 @@
                <div class="container">
                   <div class="row">
                      <div class="col-md-12">
-                        
                         <p>© {{ date('Y') }} {{ __('copyright') }}</p>
                      </div>
                   </div>
