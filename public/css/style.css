@@ -381,13 +381,13 @@ ul.conat_info li a:hover {
 
 .ir-arriba {
      display: none;
-     padding: 9px 16px;
-     border-radius: 80%;
+     padding: 4px 12px;
+     border-radius: 115%;
      border: solid rgb(255,121,0);
      cursor: pointer;
      position: fixed;
-     bottom: 100px;
-     right: 30px;
+     bottom: 91px;
+     right: 25px;
      z-index: 1000;
 }
 

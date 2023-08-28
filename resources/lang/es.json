@@ -24,6 +24,7 @@
     "email" : "correo electrónico",
     "message" : "mensaje",
     "send" : "enviar",
+    "subject" : "asunto",
     "write_message" : "Déjanos tu mensaje...",
     "home" : "Inicio",
     "about" : "Acerca de",

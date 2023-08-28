@@ -23,6 +23,7 @@
     "email" : "email",
     "message" : "message",
     "send" : "Send",
+    "subject" : "subject",
     "write_message" : "leave us your message...",
     "home" : "Home",
     "about" : "About",

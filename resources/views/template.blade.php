@@ -21,6 +21,7 @@
       <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@1,700&display=swap" rel="stylesheet">
       <script src="https://kit.fontawesome.com/d9e42506e1.js" crossorigin="anonymous"></script>
       <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+      <script type="text/javascript">window.$crisp=[];window.CRISP_WEBSITE_ID="789b48ba-96a9-47ed-a60f-b62de0b9ab15";(function(){d=document;s=d.createElement("script");s.src="https://client.crisp.chat/l.js";s.async=1;d.getElementsByTagName("head")[0].appendChild(s);})();</script>
    </head>
    <body class="main-layout">
       <span class="ir-arriba desktop mobile">
@@ -167,19 +168,22 @@
                      <form id="request" class="main_form">
                         <div class="row">
                            <div class="col-md-12 ">
-                              <input class="contactus" placeholder="{{ __('name') }}" type="type" name="name"> 
+                              <input class="contactus" placeholder="{{ __('name') }}" type="text" name="name"> 
                            </div>
                            <div class="col-md-12">
-                              <input class="contactus" placeholder="{{ __('email') }}" type="type" name="email"> 
+                              <input class="contactus" placeholder="{{ __('subject') }}" type="text" name="subject"> 
                            </div>
                            <div class="col-md-12">
-                              <input class="contactus" placeholder="{{ __('phone_number') }}" type="type" name="phone">                          
+                              <input class="contactus" placeholder="{{ __('email') }}" type="mail" name="email"> 
+                           </div>
+                           <div class="col-md-12">
+                              <input class="contactus" placeholder="{{ __('phone_number') }}" type="text" name="phone">                          
                            </div>
                            <div class="col-md-12">
                               <textarea class="contactus contactus_textarea" placeholder="{{ __('write_message')}}"></textarea>
                            </div>
                            <div class="col-lg-6 col-md-12 col-sm-12">
-                              <button class="send_btn">{{ __('send') }}</button>
+                              <button type="submit" class="send_btn">{{ __('send') }}</button>
                            </div>
                            <div class="col-lg-6 col-md-12 col-sm-12">
                               <button type="reset" class="clean_btn">{{ __('Clean') }}</button>
