@@ -9,7 +9,7 @@
     "idea" : "Idea",
     "digital" : "Professionalism",
     "profesional" : "Innovation",
-    "soport" : "Soport",
+    "support" : "Support",
     "our_services" : "Our Services",
     "our_services_description" : "At <b>Q bits Technology Inc.</b>, we believe that technology should not be limited to a select few. That's why we've crafted innovative, affordable, and easily accessible solutions that are within everyone's reach. With our budget-friendly subscription, you'll gain full access to our advanced tools, designed to transform your business without straining your budget.",
     "why_choose_us" : "Why Choose Us?",
@@ -29,6 +29,7 @@
     "services" : "Services",
     "blog" : "Blog",
     "contact" : "Contact",
+    "clean" : "Clean",
 
     "read_more" : "Read More",
     "copyright" : "All Rights Reserved. qbitsinc.com",

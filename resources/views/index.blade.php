@@ -7,11 +7,11 @@
 @endsection
 
 @section('banner_image')
-   <img class="image_desktop" src="{{ asset('images/Qbits.png') }}" alt="Qbits inc technology"/>
+   <img class="image_desktop" src="{{ asset('images/Qbits.png') }}" alt="qbits inc technology"/>
 @endsection
 
 @section('about_section_secundary_image')
-   <img class="about_image" src="{{ asset('images/about.png') }}" alt="#"/>
+   <img class="about_image" src="{{ asset('images/about.png') }}" alt="qbits inc technology"/>
 @endsection
 
 @section('about_section_secundary_title')
@@ -31,58 +31,59 @@
 <div id="why_us" class="service ">
    <div class="container text-justify">
          <div class="row">
-         <div class="col-md-12">
-            <div class="titlepage">
-               <h2>{{ __('why_us') }}</h2>
-               <p class="text-justify">{!! __('why_us_description_cost') !!}</p>
-               <p class="text-justify">{!! __('why_us_description_Professionalism') !!}</p>
-               <p class="text-justify">{!! __('why_us_description_soport') !!}</p>
-               
+            <div class="col-md-12">
+               <div class="titlepage">
+                  <h2>{{ __('why_us') }}</h2>
+                  <p class="text-justify">{!! __('why_us_description_cost') !!}</p>
+                  <p class="text-justify">{!! __('why_us_description_Professionalism') !!}</p>
+                  <p class="text-justify">{!! __('why_us_description_soport') !!}</p>
+                  
+               </div>
             </div>
-         </div>
          </div>
          <div class="row desktop">
-         <div class="col-md-12">
-            <div class="service_main">
-               <div class="service_box ">
-                     <i><img src="{{ asset('images/why_us/idea.png') }}" alt="Customized Solutions at Affordable Costs"/></i>
-                     <h4>{{ __('idea') }}</h4>
-               </div>
-               <div class="service_box ">
-                     <i><img src="{{ asset('images/why_us/professional.png') }}" alt=""/></i>
-                     <h4>{{ __('digital') }}</h4>
-               </div>
-               <div class="service_box ">
-                     <i><img src="{{ asset('images/why_us/innovation.png') }}" alt="Expertise and Professionalism"/></i>
-                     <h4>{{ __('profesional') }}</h4>
-               </div>
-               <div class="service_box ">
-                  <i><img src="{{ asset('images/why_us/soport.png') }}" alt="soport"/></i>
-                  <h4>{{ __('soport') }}</h4>
+            <div class="col-md-12">
+               <div class="service_main">
+                  <div class="service_box ">
+                        <i><img src="{{ asset('images/why_us/idea.png') }}" alt="Customized Solutions at Affordable Costs"/></i>
+                        <h4>{{ __('idea') }}</h4>
+                  </div>
+                  <div class="service_box ">
+                        <i><img src="{{ asset('images/why_us/professional.png') }}" alt=""/></i>
+                        <h4>{{ __('digital') }}</h4>
+                  </div>
+                  <div class="service_box ">
+                        <i><img src="{{ asset('images/why_us/innovation.png') }}" alt="Expertise and Professionalism"/></i>
+                        <h4>{{ __('profesional') }}</h4>
+                  </div>
+                  <div class="service_box ">
+                     <i><img src="{{ asset('images/why_us/support.png') }}" alt="support"/></i>
+                     <h4>{{ __('support') }}</h4>
+                  </div>
                </div>
             </div>
          </div>
-         </div>
+         <div class="row movil">
+            <div class="col-md-12">
+            <div class="service_main">
+               <div class="service_box">
+                  <i><img src="{{ asset('images/why_us/idea.png') }}" alt="Customized Solutions at Affordable Costs"/></i>
+                  <h4>{{ __('idea') }}</h4>
+               </div>
+               <div class="service_box">
+                  <i><img src="{{ asset('images/why_us/professional.png') }}" alt="Expertise and Professionalism"/></i>
+                  <h4>{{ __('profesional') }}</h4>
+               </div>
+               <div class="service_box">
+                  <i><img src="{{ asset('images/why_us/support.png') }}" alt="support"/></i>
+                  <h4>{{ __('support') }}</h4>
+               </div>
+            </div>
+            </div>
+      </div>
    </div>
 
-   <div class="row movil">
-         <div class="col-md-12">
-         <div class="service_main">
-            <div class="service_box">
-               <i><img src="{{ asset('images/why_us/idea.png') }}" alt="Customized Solutions at Affordable Costs"/></i>
-               <h4>{{ __('idea') }}</h4>
-            </div>
-            <div class="service_box">
-               <i><img src="{{ asset('images/why_us/professional.png') }}" alt="Expertise and Professionalism"/></i>
-               <h4>{{ __('profesional') }}</h4>
-            </div>
-            <div class="service_box">
-               <i><img src="{{ asset('images/why_us/soport.png') }}" alt="soport"/></i>
-               <h4>{{ __('soport') }}</h4>
-            </div>
-         </div>
-         </div>
-   </div>
+   
 </div>
 @endsection
 

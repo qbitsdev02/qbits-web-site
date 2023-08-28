@@ -249,7 +249,7 @@
     }
     .text-bg {
         max-width: inherit;
-        margin-top: 0px;
+        margin: 0px;
     }
     .transfot {
         padding-top: 30px;
@@ -258,10 +258,15 @@
         text-align: center;
     }
 
-    .about_right img{
-        margin: 10% 0;
-        width: 50%;
+    .mobile_drop i{
+        margin: 5px;
     }
+
+
+    .about_image{
+        padding: 10px;
+    }
+
     .text-bg h1 {
         font-size: 30px;
     color: #ffffff;

@@ -633,7 +633,7 @@ ul.conat_info li a:hover {
 
 .service .titlepage {
      text-align: center;
-     padding: 40px;
+     margin: 50px 0;
 }
 
 .service .titlepage p {
@@ -730,7 +730,7 @@ ul.conat_info li a:hover {
 }
 
 .about_image{
-     padding: 100px;
+     padding: 10%;
 }
 
 .our_services:hover {
@@ -1025,7 +1025,27 @@ ul.conat_info li a:hover {
 
 .send_btn:hover {
      background: #3b0663;
+     transition: ease-in all 0.2s;
+}
+
+.clean_btn {
+     background: #733a07;;
+     font-weight: 500;
+     font-size: 18px;
+     width: 198px;
+     color: #fff;
+     height: 57px;
+     margin-top: 20px !important;
      transition: ease-in all 0.5s;
+     text-transform: uppercase;
+     border-radius: 30px;
+     margin: 0 auto;
+     display: block;
+}
+
+.clean_btn:hover {
+     background: #8f2323;
+     transition: ease-in all 0.1s;
 }
 
 #request *::placeholder {

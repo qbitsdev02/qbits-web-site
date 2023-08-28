@@ -65,7 +65,7 @@
                         <a class="desktop" href="https://www.instagram.com/qbitsdev/" target="_blank">
                            <i class="fa-brands fa-instagram" style="color: #f5f3f2;"></i>                           
                         </a>
-                        <div class="dropdown show">
+                        <div class="dropdown show mobile_drop">
                               <i class="fa-solid fa-earth-americas" style="color: #f5f3f2;" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></i>
                            <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
                               <a class="dropdown-item" href="{{ route('change_language', 'es') }}" ><img class="bandera" src="{{ asset('images/espana.png') }}" alt="español"/> {{ __('es') }} </a>
@@ -172,8 +172,11 @@
                            <div class="col-md-12">
                               <textarea class="contactus contactus_textarea" placeholder="{{ __('write_message')}}"></textarea>
                            </div>
-                           <div class="col-md-12">
+                           <div class="col-lg-6 col-md-12">
                               <button class="send_btn">{{ __('send') }}</button>
+                           </div>
+                           <div class="col-lg-6 col-md-12">
+                              <button type="reset" class="clean_btn">{{ __('Clean') }}</button>
                            </div>
                         </div>
                      </form>

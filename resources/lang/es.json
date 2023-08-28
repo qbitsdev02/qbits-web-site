@@ -10,7 +10,7 @@
     "digital" : "Digital",
     "profesional" : "profesionalismo",
     "innovation" : "innovacion",
-    "soport" : "Soporte",
+    "support" : "Soporte",
     "our_services" : "Nuestros Servicios",
     "our_services_description" : "En <b>Q Bits Technology Inc.</b>, creemos que la tecnología no debería estar limitada a unos pocos seleccionados. Es por eso que hemos creado soluciones innovadoras, asequibles y de fácil acceso que están al alcance de todos. Con nuestra suscripción de bajo costo, obtendrás acceso completo a nuestras herramientas avanzadas, diseñadas para transformar tu negocio sin afectar tu presupuesto.",
     "why_choose_us" : "¿Por qué elegirnos?",
@@ -30,6 +30,7 @@
     "services" : "Servicio",
     "blog" : "Blog",
     "contact" : "Contacto",
+    "clean" : "Limpiar",
 
     "read_more" : "Leer Mas",
     "copyright" : "Todos los derechos reservados. qbitsinc.com",
