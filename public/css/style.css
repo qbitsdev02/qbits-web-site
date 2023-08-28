@@ -365,12 +365,18 @@ ul.conat_info li a:hover {
      /* animation-delay: -2s; */
 }
 
-.rrss_sidebar{
-     display: flex;
+
+.btn_redes{
+     text-align: center;
+     margin: 10px 50px;
+}
+
+.sidepanel a .btn_redes_icon{
+     font-size: 24px;
 }
 
 .rrss_sidebar a{
-     flex-direction: row;
+     display: inline-flex;
 }
 
 .ir-arriba {

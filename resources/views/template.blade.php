@@ -31,7 +31,7 @@
       </div>
       <div id="mySidepanel" class="sidepanel">
          <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
-         <img src="{{ asset('images/loading.png') }}" alt="Qbits inc" style="padding: 5% 20%;">
+         <img src="{{ asset('images/logo/qbits_white.png') }}" alt="Qbits inc" style="padding: 5% 20%;">
          <a href="{{ route('home') }}"> <i class="fa fa-solid fa-house" style="color: #e17900;" aria-hidden="true"></i> <span>{{ __('home') }}</span></a>
          <a href="#about" onclick="closeNav()"> <i class="fa-solid fa-user" style="color: #e17900;" aria-hidden="true"></i> <span>{{ __('about') }}</span></a>
          <a href="#why_us" onclick="closeNav()"><i class="fa-solid fa-question" style="color: #e17900;"></i> <span>{{ __('why_us') }}</span></a>
@@ -40,12 +40,18 @@
          <a href="#contact" onclick="closeNav()"><i class="fa-solid fa-envelope" style="color: #e17900;"></i> <span>{{ __('contact') }}</span> </a>
          <div class="division"></div>
          <div class="rrss_sidebar">
-            <a href="" target="_blank">
-               <i class="fa-brands fa-facebook" style="color: #ff7900;"></i>                           
-            </a>
-            <a href="https://www.instagram.com/qbitsdev/" target="_blank">
-               <i class="fa-brands fa-instagram" style="color: #ff7900;"></i>                           
-            </a>
+            <div class="row">
+               <div class="col-sm-12">
+                  <div class="btn_redes">
+                     <a href="" target="_blank">
+                        <i class="fa-brands fa-facebook btn_redes_icon"></i>
+                     </a>
+                     <a href="https://www.instagram.com/qbitsdev/" target="_blank">
+                        <i class="fa-brands fa-instagram btn_redes_icon"></i>
+                     </a>
+                  </div>
+               </div>
+            </div>
          </div>
       </div>
       <header>
