@@ -157,6 +157,7 @@
                <div class="col-md-12">
                   <div class="titlepage">
                      <h2>{{ __('contact_title') }}</h2>
+                     
                   </div>
                </div>
             </div>
@@ -165,22 +166,28 @@
             <div class="container-fluid">
                <div class="row">
                   <div class="col-md-5">
-                     <form id="request" class="main_form">
+                     
+                     <form id="form_contact_us" class="main_form" action="{{ route('send') }}" method="POST">
+                        @csrf
                         <div class="row">
                            <div class="col-md-12 ">
-                              <input class="contactus" placeholder="{{ __('name') }}" type="text" name="name"> 
+                              {{ $errors->any() ? $errors->first('name') : '' }}
+                              <input class="contactus" placeholder="{{ __('name') }}" type="text" name="name">
                            </div>
                            <div class="col-md-12">
+                              {{ $errors->any() ? $errors->first('subject') : '' }}
                               <input class="contactus" placeholder="{{ __('subject') }}" type="text" name="subject"> 
                            </div>
                            <div class="col-md-12">
+                              {{ $errors->any() ? $errors->first('email') : '' }}
                               <input class="contactus" placeholder="{{ __('email') }}" type="mail" name="email"> 
                            </div>
                            <div class="col-md-12">
-                              <input class="contactus" placeholder="{{ __('phone_number') }}" type="text" name="phone">                          
+                              {{ $errors->any() ? $errors->first('phone_number') : '' }}
+                              <input class="contactus" placeholder="{{ __('phone_number') }}" type="text" name="phone_number">                          
                            </div>
                            <div class="col-md-12">
-                              <textarea class="contactus contactus_textarea" placeholder="{{ __('write_message')}}"></textarea>
+                              <textarea class="contactus contactus_textarea" placeholder="{{ __('write_message')}}" name="body"></textarea>
                            </div>
                            <div class="col-lg-6 col-md-12 col-sm-12">
                               <button type="submit" class="send_btn">{{ __('send') }}</button>

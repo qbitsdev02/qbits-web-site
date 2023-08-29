@@ -1004,7 +1004,7 @@ ul.conat_info li a:hover {
 }
 
 .main_form .contactus {
-     border: #cce9fe solid 1px;
+     border: #ec6800 solid 1px;
      border-radius: 10px;
      margin-bottom: 25px;
      width: 100%;
@@ -1015,6 +1015,10 @@ ul.conat_info li a:hover {
      font-weight: normal;
      padding: 0 15px;
 }
+
+input.contactus.danger {
+     border: #3b0663 solid 2px;
+ }
 
 .main_form .contactus_textarea{
      height: 170px;
