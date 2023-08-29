@@ -186,7 +186,7 @@
                               <button type="submit" class="send_btn">{{ __('send') }}</button>
                            </div>
                            <div class="col-lg-6 col-md-12 col-sm-12">
-                              <button type="reset" class="clean_btn">{{ __('Clean') }}</button>
+                              <button type="reset" class="clean_btn">{{ __('clean') }}</button>
                            </div>
                         </div>
                      </form>
