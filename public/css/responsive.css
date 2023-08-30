@@ -29,12 +29,12 @@
         /* background-size: auto 64%;
         padding: 220px 0px 0px 0px; */
 
-        background: url(../images/computer_developer.jpg);
-     padding: 500px 0px 0px 0px;
-     background-size: 65%;
-     background-repeat: no-repeat;
-     min-height: 1150px;
-     background-position: right top;
+        background: url(../images/developer.jpg);
+        padding: 500px 0px 0px 0px;
+        background-size: 65%;
+        background-repeat: no-repeat;
+        min-height: 1150px;
+        background-position: right top;
     }
     .text-bg h1 {
         font-size: 43px;
@@ -213,8 +213,8 @@
         margin-top: 0px !important;
     }
     .banner_main {
-        background: url(../images/computer_developer.jpg);
-        background-size: 100vh;
+        background: url(../images/developer.jpg);
+        /* background-size: 100vh; */
         background-repeat: no-repeat;
         padding: 50% 0px 0px 0px;
     }
@@ -231,9 +231,7 @@
     }
 
     .header_banner{
-        /* font-family: 'Roboto Mono', monospace; */
         display: block;
-        background: rgba(255, 158, 0, 0.5);
     }
     
     .bg_img{
@@ -249,7 +247,8 @@
     }
     .text-bg {
         max-width: inherit;
-        margin-bottom: 200px;
+        margin: 10px;
+
     }
     .transfot {
         padding-top: 30px;
@@ -284,6 +283,10 @@
     .desktop{display: none;}
     .movil{display: block;}
 
+    div.espacio3D {
+        transform: scale(0.8);
+        margin: -20px auto 3px auto
+    }
 
     #banner1 a.carousel-control-prev {
         top: 44%;

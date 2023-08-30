@@ -7,7 +7,7 @@
 @endsection
 
 @section('about_section_secundary_image')
-   <img src="{{ asset('images/about.png') }}" alt="#"/>
+   <img src="{{ asset('images/logo/qbits_technology.png') }}" alt="#"/>
 @endsection
 
 @section('about_section_secundary_title')

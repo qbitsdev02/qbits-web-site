@@ -16,9 +16,16 @@
       <link rel="stylesheet" href="{{ asset('css/jquery.mCustomScrollbar.min.css') }}">
       <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css">
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.css" media="screen">
-      <link rel="preconnect" href="https://fonts.googleapis.com">
+      
+      {{-- <link rel="preconnect" href="https://fonts.googleapis.com">
       <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-      <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@1,700&display=swap" rel="stylesheet">
+      <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@1,700&display=swap" rel="stylesheet"> --}}
+      
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Goldman&display=swap" rel="stylesheet">
+
+
       <script src="https://kit.fontawesome.com/d9e42506e1.js" crossorigin="anonymous"></script>
       <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
       <script type="text/javascript">window.$crisp=[];window.CRISP_WEBSITE_ID="789b48ba-96a9-47ed-a60f-b62de0b9ab15";(function(){d=document;s=d.createElement("script");s.src="https://client.crisp.chat/l.js";s.async=1;d.getElementsByTagName("head")[0].appendChild(s);})();</script>
@@ -28,13 +35,13 @@
          <i class="fa-solid fa-chevron-up" style="color: rgb(255, 121, 0);font-size: 30px;padding-top: 10px;"></i>
       </span>
       <div class="loader_bg">
-         <div class="loader"><img src="{{ asset('images/loading.png') }}"/></div>
+         <div class="loader"><img src="{{ asset('images/logo/loading.png') }}"/></div>
       </div>
       <div id="mySidepanel" class="sidepanel">
          <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
          <img src="{{ asset('images/logo/qbits_white.png') }}" alt="Qbits inc" style="padding: 5% 20%;">
          <a href="{{ route('home') }}"> <i class="fa fa-solid fa-house" style="color: #e17900;" aria-hidden="true"></i> <span>{{ __('home') }}</span></a>
-         <a href="#about" onclick="closeNav()"> <i class="fa-solid fa-user" style="color: #e17900;" aria-hidden="true"></i> <span>{{ __('about') }}</span></a>
+         <a href="{{ request()->is('/about') ? '/#about' : '/about' }}" onclick="closeNav()"> <i class="fa-solid fa-user" style="color: #e17900;" aria-hidden="true"></i> <span>{{ __('about') }}</span></a>
          <a href="#why_us" onclick="closeNav()"><i class="fa-solid fa-question" style="color: #e17900;"></i> <span>{{ __('why_us') }}</span></a>
          <a href="#services" onclick="closeNav()"><i class="fa-solid fa-display" style="color: #e17900;"></i> <span>{{ __('services') }}</span></a>
          <a href="#" onclick="closeNav()"><i class="fa-solid fa-newspaper" style="color: #e17900;"></i> <span>{{ __('blog') }}</span> </a>
@@ -61,7 +68,7 @@
                <div class="row">
                   <div class="col-md-4 col-sm-4">
                      <div class="logo">
-                        <a href="{{ route('home')}}"><img src="{{ asset('images/logo.png') }}" alt="#" style="width: 150px;"/></a>
+                        <a href="{{ route('home')}}"><img src="{{ asset('images/logo/qbits_white.png') }}" alt="#" style="width: 150px;"/></a>
                      </div>
                   </div>
                   <div class="col-md-8 col-sm-8">
@@ -75,13 +82,13 @@
                         <div class="dropdown show mobile_drop">
                               <i class="fa-solid fa-earth-americas" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></i>
                            <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-                              <a class="dropdown-item" href="{{ route('change_language', 'es') }}" ><img class="bandera" src="{{ asset('images/espana.png') }}" alt="español"/> {{ __('es') }} </a>
-                              <a class="dropdown-item" href="{{ route('change_language', 'en') }}"><img class="bandera" src="{{ asset('images/eeuu.png') }}" alt="ingles"/> {{ __('en') }}</a>
+                              <a class="dropdown-item" href="{{ route('change_language', 'es') }}" ><img class="bandera" src="{{ asset('images/icons/espana.png') }}" alt="español"/> {{ __('es') }} </a>
+                              <a class="dropdown-item" href="{{ route('change_language', 'en') }}"><img class="bandera" src="{{ asset('images/icons/eeuu.png') }}" alt="ingles"/> {{ __('en') }}</a>
                            </div>
                         </div>
                         <button class="openbtn" onclick="openNav()">
-                           <img class="desktop" src="{{ asset('images/menu_icon.png') }}" alt="#"/>
-                           <img class="movil" src="{{ asset('images/menu_icon_black.png') }}" alt="#"/>
+                           <img class="desktops" src="{{ asset('images/icons/menu_icon.png') }}" alt="#"/>
+                           {{-- <img class="movil" src="{{ asset('images/icons/menu_icon_black.png') }}" alt="#"/> --}}
                         </button> 
                      </div>
                   </div>
@@ -95,7 +102,7 @@
             <div class="text-bg text-center">
                <h1>@yield('banner_title')</h1>
             </div>
-            <div class="ban_track">
+            <div class="ban_qbits">
                <figure>@yield('banner_image')</figure>
             </div>
          </div>
@@ -128,7 +135,7 @@
       
       
       <div id="about" class="about text-justify">
-         <div class="container">
+         <div class="container pt-5">
             <div class="row d_flex">
                <div class="col-md-6">
                   <div class="about_right">
@@ -171,23 +178,31 @@
                         @csrf
                         <div class="row">
                            <div class="col-md-12 ">
-                              {{ $errors->any() ? $errors->first('name') : '' }}
-                              <input class="contactus" placeholder="{{ __('name') }}" type="text" name="name">
+                              {!! $errors->any() ? '<p class="message_error">'.$errors->first('name').'</p>' : '' !!}
+                              <input class="contactus {{ $errors->any() ? 'danger' : '' }}" placeholder="{{ __('name') }}" type="text" name="name" value="{{ $errors->any() ? old('name') : '' }}">
                            </div>
                            <div class="col-md-12">
-                              {{ $errors->any() ? $errors->first('subject') : '' }}
-                              <input class="contactus" placeholder="{{ __('subject') }}" type="text" name="subject"> 
+                              {!! $errors->any() ? '<p class="message_error">'.$errors->first('reason').'</p>' : '' !!}
+                              <select class="contactus" name="reason" id="select">
+                                 <option value="">{{ __('select_contact') }}</option>
+                                 <option value="business">{{ __('business') }}</option>
+                                 <option value="ask">{{ __('ask') }}</option>
+                              </select>
                            </div>
                            <div class="col-md-12">
-                              {{ $errors->any() ? $errors->first('email') : '' }}
-                              <input class="contactus" placeholder="{{ __('email') }}" type="mail" name="email"> 
+                              {!! $errors->any() ? '<p class="message_error">'.$errors->first('subject').'</p>' : '' !!}
+                              <input class="contactus {{ $errors->any() ? 'danger' : '' }}" placeholder="{{ __('subject') }}" type="text" name="subject" value="{{ $errors->any() ? old('subject') : '' }}">
                            </div>
                            <div class="col-md-12">
-                              {{ $errors->any() ? $errors->first('phone_number') : '' }}
-                              <input class="contactus" placeholder="{{ __('phone_number') }}" type="text" name="phone_number">                          
+                              {!! $errors->any() ? '<p class="message_error">'.$errors->first('email').'</p>' : '' !!}
+                              <input class="contactus {{ $errors->any() ? 'danger' : '' }}" placeholder="{{ __('email') }}" type="mail" name="email" value="{{ $errors->any() ? old('email') : '' }}"> 
                            </div>
                            <div class="col-md-12">
-                              <textarea class="contactus contactus_textarea" placeholder="{{ __('write_message')}}" name="body"></textarea>
+                              {!! $errors->any() ? '<p class="message_error">'.$errors->first('phone_number').'</p>' : '' !!}
+                              <input class="contactus {{ $errors->any() ? 'danger' : '' }}" placeholder="{{ __('phone_number') }}" type="text" name="phone_number" value="{{ $errors->any() ? old('phone_number') : '' }}">
+                           </div>
+                           <div class="col-md-12">
+                              <textarea class="contactus contactus_textarea" placeholder="{{ __('write_message')}}" name="body">{{ $errors->any() ? old('body') : '' }}</textarea>
                            </div>
                            <div class="col-lg-6 col-md-12 col-sm-12">
                               <button type="submit" class="send_btn">{{ __('send') }}</button>
@@ -200,7 +215,7 @@
                   </div>
                   <div class="col-md-7">
                      <div class="co_tru">
-                        <figure><img src="{{ asset('images/logo.png') }}" alt="#"/></figure>
+                        <figure><img src="{{ asset('images/logo/qbits_inc.png') }}" alt="#"/></figure>
                      </div>
                   </div>
                </div>
@@ -218,7 +233,8 @@
                            <i class="fa fa-map-marker" style="color: #ff7900;" aria-hidden="true"></i>
                            <a>Florida, Miami, 150 Se 2nd Ave Ste 300</a>
                         </li>
-                        <li><i class="fa fa-phone" style="color: #ff7900;" aria-hidden="true"></i>
+                        <li>
+                           <i class="fa-brands fa-whatsapp" style="color: #ff7900;"></i>
                            <a href="https://api.whatsapp.com/send/?phone=17865719783&text=Hello,%20I%20would%20like%20to%20know%20about%20your%20services&type=phone_number&app_absent=0" target="_blank">+1 7865719783</a>
                         </li>
                         <li>
@@ -227,7 +243,6 @@
                         </li>
                      </ul>
                      {{-- <form class="bottom_form">
-                         no de momento, puedes escribir al correo si desea informaciòn
                         <h3>Newsletter</h3>
                         <input class="enter" placeholder="Enter your email" type="text" name="Enter your email">
                         <button class="sub_btn">subscribe</button>
@@ -241,7 +256,8 @@
                            <a>Anzoátegui, Lechería, Av. Principal de Lechería.
                               Centro Empresarial Y2K. Piso 1- Oficina 1-2</a>
                         </li>
-                        <li><i class="fa fa-phone" style="color: #ff7900;" aria-hidden="true"></i>
+                        <li>
+                           <i class="fa-brands fa-whatsapp" style="color: #ff7900;"></i>
                            <a href="https://api.whatsapp.com/send/?phone=584248675340&text=hola%20me%20gustaria%20saber%20de%20sus%20servicio&type=phone_number&app_absent=0" target="_blank">+58 424-8675340</a>
                         </li>
                      </ul>

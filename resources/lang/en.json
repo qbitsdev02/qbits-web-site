@@ -33,6 +33,9 @@
     "clean" : "Clean",
     "principal" : "Principal",
     "office" : "Office",
+    "select_contact" : "reason",
+    "business" : "business",
+    "ask" : "ask",
 
     "read_more" : "Read More",
     "copyright" : "All Rights Reserved. qbitsinc.com",

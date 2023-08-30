@@ -26,6 +26,11 @@
                     </div>
 
                     <div class="col-sm-12 mb-4">
+                        <span >Motivo por el que nos escribe:</span>
+                        <p class="text-uppercase fw-bold">{{ $contacto['reason'] }}</p>
+                    </div>
+
+                    <div class="col-sm-12 mb-4">
                         <span >ASUNTO:</span>
                         <p class="text-uppercase fw-bold">{{ $contacto['subject'] }}</p>
                     </div>

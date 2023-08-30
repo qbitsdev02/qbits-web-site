@@ -24,6 +24,7 @@ class SendStoreRequest extends FormRequest
     {
         return [
             'name'          => 'required',
+            'reason'        => 'required|in:business,ask',
             'subject'       => 'required',
             'email'         => 'required|email',
             'phone_number'  => 'required',

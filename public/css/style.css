@@ -41,7 +41,7 @@ html {
 body {
      color: #666666;
      font-size: 14px;
-     font-family: 'Poppins', sans-serif;
+     font-family: 'Goldman', cursive;
      line-height: 1.80857;
      font-weight: normal;
 }
@@ -356,8 +356,8 @@ ul.conat_info li a:hover {
      animation-name: header_home;
      animation-duration: 1s;
      animation-fill-mode: forwards;
-
 }
+
 .menu-fixed {
 	position:fixed;
 	z-index:1000;
@@ -400,23 +400,108 @@ ul.conat_info li a:hover {
 
 @keyframes header_home {
      from {
-          animation: header_fixed;
+          padding: 10px 10px;
+          /* animation: header_fixed; */
      }
      to {
-          padding: 30px 30px;
-          background: rgba(255, 121, 0, 0.2)
+          padding: 15px 30px;
+          background: rgba(255, 121, 0, 0.8)
      }
 }
 
 @keyframes header_fixed {
      from {
-          padding: 30px 30px;
-          background:rgba(255, 121, 0, 0.2)
+          padding: 15px 30px;
+          background:rgba(255, 121, 0, 0.8)
      }
      to {
           padding: 10px 10px;
           background: rgba(255, 121, 0, 1)
      }
+}
+
+/* cubo */
+
+div.espacio3D {
+  width: 300px;
+  height: 300px;
+  margin: 3em auto 0 auto;
+  border: 0px solid rgba(255, 121, 0, 1);
+  position: relative;
+  perspective-origin: center -30%;
+  perspective: 500px;
+  transform: scale(1);
+}
+
+div.cubo3D {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  transform-style: preserve-3d;
+  transform: translateZ(-150px);
+  animation-name: giraY;
+  animation-duration: 3000ms;
+  animation-iteration-count: infinite;
+}
+
+div.base {
+  position: absolute;
+  width: 150px;
+  height: 150px;
+/*   background-color: rgba(0, 0, 0, 0.15); */
+  transform: translateX(75px) translateY(75px) rotateX(90deg) translateZ(-200px);
+/*   box-shadow: 0 0 50px 100px rgba(0, 0, 0, 1); */
+}
+aside.cara {
+  position: absolute;
+  width: 298px;
+  height: 298px;
+  background-color: rgba(255, 121, 0, 0.30);
+  /* border: 1px solid rgba(255, 150, 0, 0.75); */
+  color: #08f;
+  font-size: 3em;
+  text-align: center;
+  line-height: 298px;
+  box-shadow: 0px 0px 5px rgba(255, 150, 0, 0.75);
+}
+
+aside.cara1 {
+  /* Frente */
+  transform: translateZ(150px);
+}
+
+aside.cara2 {
+  /* Atrás */
+  transform: rotateY(180deg) translateZ(150px);
+}
+
+aside.cara3 {
+  /* Izquierda */
+  transform: rotateY(-90deg) translateZ(150px);
+}
+
+aside.cara4 {
+  /* derecha */
+  transform: rotateY(90deg) translateZ(150px);
+}
+
+aside.cara5 {
+  /* abajo */
+  transform: rotateX(-90deg) translateZ(150px);
+}
+
+aside.cara6 {
+  /* arriba */
+  transform: rotateX(90deg) translateZ(150px);
+}
+
+@keyframes giraY {
+  0% {
+    transform: translateZ(-150px) rotateY(0deg);
+  }
+  100% {
+    transform: translateZ(-150px) rotateY(360deg);
+  }
 }
 
 
@@ -429,10 +514,11 @@ ul.conat_info li a:hover {
 /** banner section **/
 
 .banner_main {
-     padding-top: 190px;
+     padding-top: 20%;
      background-size: 65%;
      background-repeat: no-repeat;
      background-position: right top;
+     height: 100vh;
 }
 
 .icon_primary{
@@ -450,7 +536,7 @@ ul.conat_info li a:hover {
      width: 100%;
      height: 100vh;
      z-index: -10;
-     background: url(../images/banner.jpg);
+     background: url(../images/developer.jpg);
      background-size: 100%;
 }
 .header_banner{
@@ -458,8 +544,12 @@ ul.conat_info li a:hover {
      /* background: #c91f1f; */
 }
 
+img.image_desktop {
+     width: 50%;
+ }
+
 .banner_shadow{
-     background: rgba(255, 158, 0, 0.2);
+     /* background: rgba(255, 158, 0, 0.2); */
      margin-bottom: 200px;
 }
 
@@ -469,15 +559,15 @@ ul.conat_info li a:hover {
 }
 
 .img_banner{
-     padding: 40px;
+     /* padding: 40px; */
 }
 
 .text-bg h1 {
      color: #f4f1f7;
-    font-size: 50px;
-    line-height: 100px;
-    font-weight: bold;
-    text-shadow: 2px 2px #2c2a2a;
+     font-size: 50px;
+     line-height: 100px;
+     font-weight: bold;
+     text-shadow: 2px 2px #2c2a2a;
 }
 
 .text-bg span {
@@ -496,7 +586,7 @@ ul.conat_info li a:hover {
  } */
 
 
-.ban_track figure {
+.ban_qbits figure {
      margin: 0;
 }
 
@@ -626,7 +716,6 @@ ul.conat_info li a:hover {
 
 .about {
      background-color: #ffffff;
-     margin-top: -160px;
 }
 
 .about .about_img figure {
@@ -1018,6 +1107,15 @@ ul.conat_info li a:hover {
 
 input.contactus.danger {
      border: #3b0663 solid 2px;
+}
+
+p.message_error {
+     background: #ff79003d;
+     text-align: end;
+     border-radius: 8px;
+     padding: 5px 20px;
+     margin-bottom: 5px;
+     color: #3b0663;
  }
 
 .main_form .contactus_textarea{

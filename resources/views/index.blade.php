@@ -7,11 +7,23 @@
 @endsection
 
 @section('banner_image')
-   <img class="image_desktop" src="{{ asset('images/Qbits.png') }}" alt="qbits inc technology"/>
+   {{-- <img class="image_desktop" src="{{ asset('images/logo/qbits_technology.png') }}" alt="qbits inc technology"/> --}}
+   <div class="espacio3D">
+   <div class="cubo3D">
+      <div class="base"></div>
+      <aside class="cara cara1"></aside>
+      <aside class="cara cara2"></aside>
+      <aside class="cara cara3"></aside>
+      <aside class="cara cara4"></aside>
+      <aside class="cara cara5"></aside>
+      <aside class="cara cara6"></aside>
+   </div><!-- termina cubo 3d -->
+   </div><!-- termina espacio 3d -->
+
 @endsection
 
 @section('about_section_secundary_image')
-   <img class="about_image" src="{{ asset('images/about.png') }}" alt="qbits inc technology"/>
+   <img class="about_image" src="{{ asset('images/logo/qbits_technology.png') }}" alt="qbits inc technology"/>
 @endsection
 
 @section('about_section_secundary_title')
@@ -149,14 +161,14 @@
       <div class="row">
          <div class="col-md-5">
             <div class="choose_box">
-               <i><img src="{{ asset('images/why1.png') }}" alt="#"/></i>
+               <i><img src="{{ asset('images/icons/why1.png') }}" alt="#"/></i>
                <h3>{{ __('our_vission') }}</h3>
                <p class="text-justify">"{!! __('our_vission_description') !!}"</p>
             </div>
          </div>
          <div class="col-md-5 offset-md-2">
             <div class="choose_box">
-               <i><img src="{{ asset('images/why1.png') }}" alt="#"/></i>
+               <i><img src="{{ asset('images/icons/why1.png') }}" alt="#"/></i>
                <h3>{{ __('our_mission') }}</h3>
                <p class="text-justify">"{!! __('our_mission_description') !!}"</p>
             </div>
