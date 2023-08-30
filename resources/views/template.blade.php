@@ -87,8 +87,7 @@
                            </div>
                         </div>
                         <button class="openbtn" onclick="openNav()">
-                           <img class="desktops" src="{{ asset('images/icons/menu_icon.png') }}" alt="#"/>
-                           {{-- <img class="movil" src="{{ asset('images/icons/menu_icon_black.png') }}" alt="#"/> --}}
+                           <img src="{{ asset('images/icons/menu_icon.png') }}" alt="#"/>
                         </button> 
                      </div>
                   </div>
