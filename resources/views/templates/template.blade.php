@@ -16,16 +16,9 @@
       <link rel="stylesheet" href="{{ asset('css/jquery.mCustomScrollbar.min.css') }}">
       <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css">
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.css" media="screen">
-      
-      {{-- <link rel="preconnect" href="https://fonts.googleapis.com">
-      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-      <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@1,700&display=swap" rel="stylesheet"> --}}
-      
       <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Goldman&display=swap" rel="stylesheet">
-
-
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Goldman&display=swap" rel="stylesheet">
       <script src="https://kit.fontawesome.com/d9e42506e1.js" crossorigin="anonymous"></script>
       <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
       <script type="text/javascript">window.$crisp=[];window.CRISP_WEBSITE_ID="789b48ba-96a9-47ed-a60f-b62de0b9ab15";(function(){d=document;s=d.createElement("script");s.src="https://client.crisp.chat/l.js";s.async=1;d.getElementsByTagName("head")[0].appendChild(s);})();</script>
@@ -39,28 +32,13 @@
       </div>
       <div id="mySidepanel" class="sidepanel">
          <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
-         <img src="{{ asset('images/logo/qbits_white.png') }}" alt="Qbits inc" style="padding: 5% 20%;">
          <a href="{{ route('home') }}"> <i class="fa fa-solid fa-house" style="color: #e17900;" aria-hidden="true"></i> <span>{{ __('home') }}</span></a>
          <a href="{{ request()->is('/about') ? '/#about' : '/about' }}" onclick="closeNav()"> <i class="fa-solid fa-user" style="color: #e17900;" aria-hidden="true"></i> <span>{{ __('about') }}</span></a>
          <a href="#why_us" onclick="closeNav()"><i class="fa-solid fa-question" style="color: #e17900;"></i> <span>{{ __('why_us') }}</span></a>
          <a href="#services" onclick="closeNav()"><i class="fa-solid fa-display" style="color: #e17900;"></i> <span>{{ __('services') }}</span></a>
          <a href="#" onclick="closeNav()"><i class="fa-solid fa-newspaper" style="color: #e17900;"></i> <span>{{ __('blog') }}</span> </a>
          <a href="#contact" onclick="closeNav()"><i class="fa-solid fa-envelope" style="color: #e17900;"></i> <span>{{ __('contact') }}</span> </a>
-         <div class="division"></div>
-         <div class="rrss_sidebar">
-            <div class="row">
-               <div class="col-sm-12">
-                  <div class="btn_redes">
-                     <a href="" target="_blank">
-                        <i class="fa-brands fa-facebook btn_redes_icon"></i>
-                     </a>
-                     <a href="https://www.instagram.com/qbitsdev/" target="_blank">
-                        <i class="fa-brands fa-instagram btn_redes_icon"></i>
-                     </a>
-                  </div>
-               </div>
-            </div>
-         </div>
+         {{-- <div class="division"></div> --}}
       </div>
       <header>
          <div class="header">
@@ -73,9 +51,6 @@
                   </div>
                   <div class="col-md-8 col-sm-8">
                      <div class="right_bottun">
-                        <a class="desktop" href="">
-                           <i class="fa-brands fa-facebook" style="color: #f5f3f2;"></i>                           
-                        </a>
                         <a class="desktop" href="https://www.instagram.com/qbitsdev/" target="_blank">
                            <i class="fa-brands fa-instagram" style="color: #f5f3f2;"></i>                           
                         </a>
@@ -86,6 +61,29 @@
                               <a class="dropdown-item" href="{{ route('change_language', 'en') }}"><img class="bandera" src="{{ asset('images/icons/eeuu.png') }}" alt="ingles"/> {{ __('en') }}</a>
                            </div>
                         </div>
+                        {{-- form para inicio de sesion al panel administrivo Qbist | terceros  --}}
+                        {{-- <div class="dropdown show mobile_drop">
+                              <i class="fa-solid fa-user" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></i>
+                           <div class="dropdown-menu form_login" aria-labelledby="dropdownMenuLink">
+                              <form id="form_login" class="main_form" action="" method="POST">
+                                 @csrf
+                                 <div class="row">
+                                    <div class="col-md-12 ">
+                                       {!! $errors->any() ? '<p class="message_error">'.$errors->first('name').'</p>' : '' !!}
+                                       <input class="contactus {{ $errors->any() ? 'danger' : '' }}" placeholder="{{ __('User') }}" type="text" name="name" value="{{ $errors->any() ? old('name') : '' }}">
+                                    </div>
+                                    <div class="col-md-12">
+                                       {!! $errors->any() ? '<p class="message_error">'.$errors->first('subject').'</p>' : '' !!}
+                                       <input class="contactus {{ $errors->any() ? 'danger' : '' }}" placeholder="{{ __('Password') }}" type="text" name="subject" value="{{ $errors->any() ? old('subject') : '' }}">
+                                    </div>
+                                    <div class="col-lg-12 col-md-12 col-sm-12">
+                                       <button type="submit" class="login_btn_success">{{ __('Login') }}</button>
+                                       <p class="login_forgot">¿Recuperar mi contraseña?</p>
+                                    </div>
+                                 </div>
+                              </form>
+                           </div>
+                        </div> --}}
                         <button class="openbtn" onclick="openNav()">
                            <img src="{{ asset('images/icons/menu_icon.png') }}" alt="#"/>
                         </button> 
@@ -102,7 +100,10 @@
                <h1>@yield('banner_title')</h1>
             </div>
             <div class="ban_qbits">
-               <figure>@yield('banner_image')</figure>
+               
+               <div class="img_banner" style="background-image: url({{ asset('images/logo/qbits_q.png') }});">
+                  <figure>@yield('banner_image')</figure>
+               </div>
             </div>
          </div>
          <div id="banner1" class="carousel slide banner_slide" data-ride="carousel">
@@ -113,16 +114,17 @@
                <div class="carousel-item active">
                   <div class="container-fluid">
                      <div class="carousel-caption">
-                        <div class="row banner_shadow">
+                        <div class="row">
                            <div class="col-md-7 col-lg-5">
                               <div class="text-bg">
                                  <h1>@yield('banner_title')</h1>
                               </div>
                            </div>
                            <div class="col-md-12 col-lg-7">
-                              <div class="img_banner">
+                              <div class="{{ request()->is('/about') ? '' : 'img_banner' }}" style="background-image: url({{ asset('images/logo/qbits_q.png') }});">
                                  <figure>@yield('banner_image')</figure>
                               </div>
+                              {{--  --}}
                            </div>
                         </div>
                      </div>
@@ -275,7 +277,6 @@
                <div class="container">
                   <div class="row">
                      <div class="col-md-12">
-                        <i class="fa-brands fa-facebook" style="color: #ff7900;"></i>
                         <a href="https://www.instagram.com/qbitsdev/" target="_blank">
                            <i class="fa-brands fa-instagram" style="color: #ff7900;"></i>                           
                         </a>

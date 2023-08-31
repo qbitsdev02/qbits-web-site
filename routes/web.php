@@ -22,3 +22,5 @@ Route::get('/about', [HomeController::class, 'about'])->name('about');
 Route::post('/send', [SendController::class, 'send'])->name('send');
 
 Route::get('/lang/{locale}', [HomeController::class, 'changeLang'])->name('change_language');
+
+Route::view('/blog','blog.index');
